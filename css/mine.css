@@ -1,8 +1,72 @@
-
-
-.m_table-hover{
-    border: 1px solid #ddd;
+.m_table-hover {
+  border: 1px solid #ddd;
 }
-tr:hover{
-    background-color: #321b1b43
+
+tr:hover {
+  background-color: #321b1b43
+}
+
+.center {
+  max-width: 100%;
+  margin: auto;
+}
+
+.header-area {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 10px;
+
+  z-index: 10;
+  list-style-type: none;
+  overflow: hidden;
+  background-color: hwb(94 12% 83% / 0.812);
+
+}
+
+.header-content {
+  top: 0;
+  width: 100%;
+  margin: auto;
+  width: 60%;
+}
+
+.site-bg {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.site-bg-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: hwb(91 2% 83% / 0.346);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  text-decoration: none !important;
+  color: white;
+
+}
+
+li a:hover:not(.active) {
+  color: #e9dd9c;
 }

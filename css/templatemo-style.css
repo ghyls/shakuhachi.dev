@@ -35,7 +35,7 @@
 }
 
 .blue {
-	color: #06C;
+	color: rgb(255, 255, 255);
 }
 
 /*---------------------------------------------------------
@@ -187,14 +187,9 @@ body {
   font-family: 'robotolight';
 }
 
+
 a {
-  color: #5cb48e;
-  -webkit-transition: all 150ms ease-in-out;
-  -moz-transition: all 150ms ease-in-out;
-  -ms-transition: all 150ms ease-in-out;
-  -o-transition: all 150ms ease-in-out;
-  transition: all 150ms ease-in-out;
-  text-decoration: none !important;
+
 }
 a:hover {
   color: #333333;
@@ -224,6 +219,7 @@ h1, h2, h3, h4, h5 {
 
 .site-bg {
   position: fixed;
+  top: 0;
   height: 100%;
   width: 100%;
   z-index: 0;
@@ -243,9 +239,10 @@ h1, h2, h3, h4, h5 {
   background: hwb(91 2% 83% / 0.346);
 }
 
+
 #page-content {
   position: relative;
-  z-index: 12;
+  z-index: 5;
   margin-top: 60px;
 }
 @media screen and (max-width: 992px) {
@@ -343,16 +340,7 @@ h1, h2, h3, h4, h5 {
 /*---------------------------------------------------------
  3. Header
 -------------------------------------------------------- */
-.top-header {
-  position: relative;
-  z-index: 10;
-  padding: 14px 0;
-  background: rgba(0, 0, 0, 0.7);
-}
 
-.phone-info a {
-  color: #5cb48e;
-}
 @media screen and (max-width: 992px) {
   .phone-info {
     text-align: center;
@@ -366,18 +354,8 @@ h1, h2, h3, h4, h5 {
   color: white;
 }
 .social-icons li {
-  display: inline-block;
-  margin-left: 15px;
 }
-@media screen and (max-width: 992px) {
-  .social-icons {
-    text-align: center;
-    margin-top: 20px;
-  }
-  .social-icons li:first-child {
-    margin-left: 0;
-  }
-}
+
 
 #nav a {
   display: block;
@@ -443,12 +421,10 @@ h1, h2, h3, h4, h5 {
 }
 
 .show-menu {
-  background: rgba(92, 180, 142, 0.5);
   display: none;
 }
 .show-menu li {
   display: block;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 .show-menu li:last-child {
   border-bottom: 0;
@@ -540,7 +516,6 @@ h1, h2, h3, h4, h5 {
 
 .progess-bars span {
   font-size: 13px;
-  color: #5cb48e;
 }
 
 .progress {
@@ -619,7 +594,7 @@ h1, h2, h3, h4, h5 {
   margin-top: 30px;
 }
 .site-footer a {
-  color: #5cb48e;
+  color: #000000;
 }
 
 
