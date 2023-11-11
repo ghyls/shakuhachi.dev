@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="js/vendor/modernizr-2.6.2.min.js"></script>
   <script src="js/vendor/jquery-1.10.2.min.js"></script>
+  <script src="js/main.js"></script>
   <!--<script type="module" src="/pages/sound/js/main.js"></script>!-->
   <link rel="stylesheet" href="css/templatemo-style.css">
   <link rel="stylesheet" type="text/css" href="pages/gal/css/style.css">
@@ -17,22 +18,19 @@
 
   <!-- TOP HEADER -->
   <div class="header-area">
-    <div class="header-content">
+    <div class="header-content" id="myheader">
 
-      <div class="col-sm-1">
-        <li><a href="/">Home</a></li>
-      </div>
-      <div class="col-sm-1">
-        <li><a href="/gallery.html">Gallery</a></li>
-      </div>
-      <div class="col-sm-9">
-        <li><a href="/soundLibrary.html">Sound Library</a></li>
-      </div>
-      <div class="col-sm-1">
-        <li><a href="https://www.instagram.com/mario.shakuhachi.lab/" class="fa fa-instagram"></a></li>
-      </div>
+        <a href="/" class="col-sm-1">Home</a>
+        <a href="/gallery.html" class="col-sm-1">Gallery</a>
+        <a href="/soundLibrary.html" class="active col-sm-9">Sound Library</a>
+        <a href="https://www.instagram.com/mario.shakuhachi.lab/" class="fa fa-instagram col-sm-1"></a>
+        <a href="javascript:void(0);" class="icon col-sm-2" onclick="myFunction()">
+            Menu <i class="fa fa-bars"></i>
+        </a>
+
     </div>
-  </div> <!-- .top-header -->
+  </div> 
+  <!-- .top-header -->
 
 
 

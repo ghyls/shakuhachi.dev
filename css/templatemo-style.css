@@ -81,8 +81,6 @@ table {
 
 html {
   font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
 }
 
 a:focus {
@@ -106,8 +104,6 @@ audio,
 canvas,
 video {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
 }
 
 audio:not([controls]) {
@@ -141,13 +137,11 @@ textarea {
   font-size: 100%;
   margin: 0;
   vertical-align: baseline;
-  *vertical-align: middle;
 }
 
 button,
 input {
   line-height: normal;
-  *overflow: visible;
 }
 
 button::-moz-focus-inner,
@@ -161,16 +155,8 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   cursor: pointer;
-  -webkit-appearance: button;
 }
 
-input[type="search"] {
-  -webkit-appearance: textfield;
-}
-
-input[type="search"]:-webkit-search-decoration {
-  -webkit-appearance: none;
-}
 
 textarea {
   overflow: auto;
@@ -184,15 +170,7 @@ body {
   font-size: 14px;
   line-height: 24px;
   color: white;
-  font-family: 'robotolight';
-}
-
-
-a {
-
-}
-a:hover {
-  color: #333333;
+  font-family: 'robotoregular';
 }
 
 h1, h2, h3, h4, h5 {
@@ -213,9 +191,6 @@ h1, h2, h3, h4, h5 {
   color: #666;
 }
 
-:-ms-input-placeholder {
-  color: #666;
-}
 
 .site-bg {
   position: fixed;
@@ -245,11 +220,7 @@ h1, h2, h3, h4, h5 {
   z-index: 5;
   margin-top: 60px;
 }
-@media screen and (max-width: 992px) {
-  #page-content {
-    margin-top: 0;
-  }
-}
+
 
 .content {
   display: none;
@@ -312,12 +283,7 @@ h1, h2, h3, h4, h5 {
 .subscribe-form .button-holder {
   text-align: left;
 }
-@media screen and (max-width: 992px) {
-  .subscribe-form .button-holder {
-    margin-top: 20px;
-    text-align: center;
-  }
-}
+
 .subscribe-form p {
   margin-top: 20px;
   font-size: 12px;
@@ -333,15 +299,12 @@ h1, h2, h3, h4, h5 {
   /* Firefox 19+ */
   color: #fff;
 }
-.subscribe-form :-ms-input-placeholder {
-  color: #fff;
-}
 
 /*---------------------------------------------------------
  3. Header
 -------------------------------------------------------- */
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 100px) {
   .phone-info {
     text-align: center;
   }
@@ -352,8 +315,6 @@ h1, h2, h3, h4, h5 {
 }
 .social-icons a {
   color: white;
-}
-.social-icons li {
 }
 
 
@@ -393,12 +354,7 @@ h1, h2, h3, h4, h5 {
   margin-top: 120px;
   margin-left: 45%;
 }
-@media screen and (max-width: 992px) {
-  .logo-top-margin {
-    margin-top: 0!important;
-    margin-left: 0!important;
-  }
-}
+
 
 .responsive-menu {
   position: relative;
@@ -442,7 +398,7 @@ h1, h2, h3, h4, h5 {
   margin-right: 15px;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 100px) {
   .logo-holder {
     text-align: center;
     position: relative;
@@ -470,7 +426,7 @@ h1, h2, h3, h4, h5 {
   width: 100%;
   display: block;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 100px) {
   .profile-thumb {
     float: none;
     margin-bottom: 25px;

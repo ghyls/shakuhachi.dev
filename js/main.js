@@ -48,3 +48,15 @@
 
 
 })(jQuery);
+
+
+function myFunction() {
+
+	console.log('myFunction was called');
+	var x = document.getElementById("myheader");
+	if (x.className === "header-content") {
+	  x.className += " responsive";
+	} else {
+	  x.className = "header-content";
+	}
+  }
