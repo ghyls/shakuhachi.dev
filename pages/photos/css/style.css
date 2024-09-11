@@ -140,6 +140,155 @@ p {
   cursor: pointer;
 }
 
+.button {
+  background-color: #04AA6D; /* Green */
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+  color: white;
+  padding: 10px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 0px;
+  width: 150px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+
+.button_bw {
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button_bw:hover{
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #8a8a8a;
+  border: 2px solid #000000;
+}
+
+
+.button_colour {
+  background-color: #ffffff;
+  color: #0064e6;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button_colour:hover {
+  background-color: #0064e6;
+  color: #ffffff;
+}
+.button_ir {
+  background-color: #ffffff;
+  color: #c40000;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button_ir:hover {
+  color: #ffffff;
+  background-color: #6d0000;
+  border: 2px solid #6d0000;
+}
+
+
+.cols2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  color: #000000;
+
+  /* Make imgs fit into grid */
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.cols3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  color: #000000;
+
+  /* Make imgs fit into grid */
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.a1_1 {
+  grid-row: 1;
+  grid-column: 1;
+}
+.a1_2 {
+  grid-row: 1;
+  grid-column: 2;
+}
+.a1_3 {
+  grid-row: 1;
+  grid-column: 3;
+}
+.a1_12 {
+  grid-row: 1;
+  grid-column: 1 / 3;
+}
+.a1_24 {
+  grid-row: 1;
+  grid-column: 2 / 4;
+}
+.a12_2 {
+  grid-row: 1 / 3;
+  grid-column: 2;
+}
+.a2_1 {
+  grid-row: 2;
+  grid-column: 1;
+}
+.a2_12 {
+  grid-row: 2;
+  grid-column: 1 / 3;
+}
+.a2_3 {
+  grid-row: 2;
+  grid-column: 3;
+}
+.a24_13 {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+}
+.a3_12 {
+  grid-row: 3;
+  grid-column: 1 / 3;
+}
+.a3_3 {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+
+
+
+
+
 .row {
   /* center the images */
   display: flex;
@@ -171,7 +320,10 @@ p {
 }
 
 hr {
-  width: 50%;
+  width: 60%;
+  border-width: 1px;
+  border-color: #000000;
+
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */

@@ -15,42 +15,41 @@
 </head>
 
 <body>
-  
   <!-- TOP HEADER -->
   <div class="header-area">
     <div class="header-content" id="myheader">
 
-        <a href="/" class="active col-sm-1">Home</a>
-        <a href="/gallery.html" class="col-sm-1">Gallery</a>
-        <a href="/soundLibrary.html" class="col-sm-2">Sound Library</a>
-        <a href="/photos.html" class="col-sm-7">Photos</a>
-        <a href="https://www.instagram.com/mario.shakuhachi.lab/" class="fa fa-instagram col-sm-1"></a>
-        <a href="javascript:void(0);" class="icon col-sm-2" onclick="myFunction()">
-            Menu <i class="fa fa-bars"></i>
-        </a>
+      <a href="/" class="col-sm-1">Home</a>
+      <a href="/gallery.html" class="col-sm-1">Gallery</a>
+      <a href="/soundLibrary.html" class="col-sm-2">Sound Library</a>
+      <a href="/photos.html" class="active col-sm-7">Photos</a>
+      <a href="https://www.instagram.com/mario.shakuhachi.lab/" class="fa fa-instagram col-sm-1"></a>
+      <a href="javascript:void(0);" class="icon col-sm-2" onclick="myFunction()">
+        Menu <i class="fa fa-bars"></i>
+      </a>
 
     </div>
-  </div> 
+  </div>
   <!-- .top-header -->
 
 
 
-  
+
   <div class="site-bg"></div>
   <div class="site-bg-overlay"></div>
-  
+
   <!--<img src="https://source.unsplash.com/random/?24">-->
   <!--<img src="https://source.unsplash.com/random/?25">-->
   <!--<img src="https://source.unsplash.com/random/?26">-->
-  
+
   <div class="container" id="page-content">
-    
+
     <!-- The Modal -->
     <div id="myModal" class="modal">
       <img class="modal-content" id="img01">
       <div id="caption"></div>
     </div>
-    
+
     <div class="text-center">
       <br>
       <h1>Absolutely nothing to do with shakuhachi,</h1>
@@ -58,56 +57,189 @@
       <br>
       <h1>尺八と全く関係ありません、</h1>
       <h1>ただの撮った写真です。</h1>
-      <h1>^-^</h1>
 
     </div>
 
+
+
+    <!-- buttons as menu -->
+    <br>
+
+
+    <hr>
+    <div class="text-center">
+      
+      <button class="button button_bw" onclick="hideAll(); showBlackAndWhite();">Black & White</button>
+      <button class="button button_ir" onclick="hideAll(); showInfrared();">Infrared</button>
+      <button class="button button_colour" onclick="hideAll(); showColor();">Color</button>
+      
+    </div>
+    <hr>
 
     <br><br>
-    <div class="section-title">
-      - Colour -
-    </div>
-    <div class="row">
-      <div class="column">
-        <img class="clicker" alt="石橋、大阪" src="https://lh3.googleusercontent.com/pw/AP1GczN6poMaTR1tngCqY455p1St6QLvpJphK0cLuQbRAXlDu9ExDVxa2n3VdZr1QElaW6bgM3QnKwueYpDG5CqtUj2mwAdCcaU2ZhGQsawmxO2TetzFJME8YE5uBlszH44f8WOk-A2Uqay60_g_7AOD4X6v7w=w1544-h1024-s-no?authuser=1" >
-        <img class="clicker" alt="猪名川、大阪" src="https://lh3.googleusercontent.com/pw/AP1GczMwHsjNrLL_QAlL5SVTCvMBcft6aCvvOhRmwlMlCbSBDkwpib4o39k3pvi3lepVaW1Vqi7dasMtXDwJFn3BAc1Pt-9EoZO-_KfBsDsoUBJMe_HhCE6lDX0JRu4ET7HdXGA7aPjpi32VVmEcbgQZxbcU6A=w1112-h1672-s-no?authuser=1">
-        <img class="clicker" alt="大阪" src="https://lh3.googleusercontent.com/pw/AP1GczOIib3d5szy7HapILtSGdGV5M88rhEv9Q7x2qCNt7x0aRQiKsODweE_Z_XKl0HSmKijAsvKRxXdTDZKJY7SKZROmYOUuDnC7TRGJA2q3EdDVTNj-BlDbBWLQtANItXlI7-3S9epDtHJi4JoRHT0vbf_QA=w1112-h1672-s-no?authuser=1">
-      </div>
-      <div class="column">
-        <img class="clicker" alt="猪名川、大阪" src="https://lh3.googleusercontent.com/pw/AP1GczNj90h3nBII_t_DEBnJqn9Ul6I8TEfyb7D373RrES3bKidS8L5riUfFIkhDsBljbMku7HM6NR99MfWWblezHt2Ve9g3OW7xNVI3spfXveTH8_peVrZFdZ6RX9M_gH0tt2w2WZWGrZeoNyKGp3ABpbuSwQ=w1112-h1672-s-no?authuser=1">
-        <img class="clicker" alt="東海村" src="https://lh3.googleusercontent.com/pw/AP1GczPrGvL5pt1NOOg-_UMSMHIUqhySFhejY6yrpNCkouxtICY2Kb0JNDz8x61qzdhySUcFzwV-h0yRN7QyCZsnGDX8UKVsxe7UJBATDFuZdQy8MTN-YP0JEcZc8_UCyZKUkwu6yTGPXZyL5vLoOs1LUFg4Cw=w1112-h1672-s-no?authuser=1">
-        <img class="clicker" alt="静岡" src="https://lh3.googleusercontent.com/pw/AP1GczMSwFb4pIid9kn0Hv3qWUyzNLcTeFG_IXSXcmFIFJsJDFDNM1luW3FWBEeHMpIMOwQS_Gx7Oig5xak4B5xqawsB8S2oKj1btz8evM4Nzg_H3Bou0TIPyIC_pbpyw8m61nRp91883UXRfSXvdwKw5Q7l7Q=w2512-h1672-s-no?authuser=1">
-      </div>
-      <div class="column">
-        <img class="clicker" alt="猪名川" src="https://lh3.googleusercontent.com/pw/AP1GczMiwJSy6V-gnffihX9whmKlx6Ew38-dwI8egvGNhkn1fZlXEIkSe3ep-ZPYcHz6_vKaXnwB-ehLC6EFjYVeyNTfo5Bj-bVZt_JD_yqDQLWd_y0zHYxU0cM90_t1xn0Hb3-x8A3XF6mPLocDwNWpavrgvQ=w2512-h1672-s-no?authuser=1">
-        <img class="clicker" alt="猪名川" src="https://lh3.googleusercontent.com/pw/AP1GczMw5_78K0do_qUu6Umz10y5cX3xszHrkQCejvJp4dPonURhY_MbW9zFJozfKBmi01l56BfGScUfLgj7PlL1ZLOO6a7aCN2Zyr5Z61C2yaenyHezUySkuB0HYrv1Yghk6FHVu6mBWFeKqY_9IbmxVorEnA=w1112-h1672-s-no?authuser=1">
-        <img class="clicker" alt="静岡" src="https://lh3.googleusercontent.com/pw/AP1GczMT9hl7cfL70X6oOju8aqvcINumNymGqO0TSWhKBBbKKdaPqeSrTRs6CnszLNoPr8wn_9idQvhXuliDM1qzy-99HHiW6tqiY6yUZT6NIZ1s-hnkCTL0hwbUokJ71pTeaQFeJFva6k2Z_NdhOm4cj9sbrA=w2512-h1672-s-no?authuser=1">
-      </div>
-    </div>
 
-    <br><br>
-    <div class="section-title">
-      - BW -
-    </div>
-    <div class="row">
-      <div class="column">
-        <img class="clicker" alt="岡町、大阪" src="https://lh3.googleusercontent.com/pw/AP1GczPWNCkDRnw1GgCcgzWXdrD-8fHcBWnTsSh7d0Tx62xDX1s8LvS85HXzPS9pdYWVXqqBqT2GbPgA6yBtcdwn673j9y2_n1R1QyamH__kUAvF8vILJ0_4llT19FkbNJgNfzygY3msX_cUCWKDePwmdCcUmA=w1114-h1672-s-no?authuser=1">
-        <img class="clicker" alt="J-PARC、茨城県" src="https://lh3.googleusercontent.com/pw/AP1GczO8hhYC8aaClVnyJci2A52Bl56fpd8VKrpdPYtrCLB7d3Q6OlL01LPc0Q1CRMUNgg7voxZHe7USsH4tCoWIjnnRD4WSm5wEgHOZAkgdVAaJ_aKOCjRh3RF_WWzCOmW5zAkKbHMoo_gZ-k5noch_f4GZPw=w1112-h1672-s-no?authuser=1">
-        <img class="clicker" alt="東海村、茨城県" src="https://lh3.googleusercontent.com/pw/AP1GczNbnQkNNjfm_xJJhMl5nxKkfVdEqVzQD2-HeH6mnXTHJcQjEUyhpw4AH54AlZXz96Z3ISpJ2-POnA_Wo1Z4ZfFNtxP7Si_Mi5QxyBEqjcTDNMwe6RoMGqDkCPO3-dZLbwb0p5ipji9dnGx11lQxJDPAgg=w2512-h1672-s-no?authuser=1">
-      </div>
-      <div class="column">
-        <img class="clicker" alt="IPMU、東京" src="https://lh3.googleusercontent.com/pw/AP1GczMUT11hczsXboVKOPkkIg0dxpuvzr-Ml-C1oJAr2sMW0bAGfUlFJOwXTUWmJl6XTHZ-TknTBtiRsWE0BKmMlAusPuAPUDLfwc_X2cjON8Rng9KEyuiS4rR9Hf9ke6ZxK-Sn7bz6Y_C33SHqFfQBhsswng=w1122-h1672-s-no?authuser=1">
-        <img class="clicker" alt="東海村、茨城県" src="https://lh3.googleusercontent.com/pw/AP1GczPfvvgXbTe8B2unq_MmAOdSbE4V6iLzq2ZAlSDLnVFXfImkjQdE1FqilG_3kLouzpuvzt00yV80wcSEai3XXjL_lWtPGelmjDhwgqxSF8MozER491Pq3dwWIOcfQShQDkyZMHSR7lpSzXvODPwZV18JUA=w1112-h1672-s-no?authuser=1">
-      </div>
-      <div class="column">
-        <img class="clicker" alt="大阪" src="https://lh3.googleusercontent.com/pw/AP1GczMVdbvBumZRfBZBylQux9Ngr8QGXYsgOoO2I57pjHdLiGBU3-523meLb7uU5x3y652W_rhA_m572g_PXMnZQlXCgMpAVQ9yt8GfIJ-xJRz1_QRkX0ex_KGtfHUx_2g0A-NRzSYHPgfJvkS1MSaPMd23gw=w1120-h1672-s-no?authuser=1">
-        <img class="clicker" alt="大阪" src="https://lh3.googleusercontent.com/pw/AP1GczOKfDCNiOCei3uVkKaI0aK2mMfFOJTcy6djV_n0QnJJdO-V_pOOblt4MWnWu5I0aMwbM4c0xK7-NVmdvxEU6200UK1NIyfXuFMAuRHVsukKKVyGqZCLuMkfbn1K0CUKjJ4e8Sle4Ah6xf3J0JLrTdzsLQ=w1118-h1672-s-no?authuser=1">
-      </div>
-    </div>
+    <div id="infrared">
+      <div class="cols3">
+        <div class="a1_12">
+          <img class="clicker" alt="石橋、大阪"
+            src="https://lh3.googleusercontent.com/pw/AP1GczNGw-aU8p1k9K6QolY7DFaVYWhRz3mKFrqfsRr4jTaWEO2qxO3DbAOzI8tKe5q02v1edGCyId2PDgaaQZuPxVwPa_62kDd5uOilDNR4CbzjLIYQtuOVe11ORFHtWGAd2GrAzpJA33PusX2-JhACPVpIwQ=w2504-h1672-s-no?authuser=0">
+        </div>
+        <div class="a1_3">
+          <img class="clicker" alt="猪名川"
+          src="https://lh3.googleusercontent.com/pw/AP1GczM3odPor4X1FzxgRNZ45ByOEiKLiB9WjCUwPZy6ODLud7mftWetUC97KVc3tDZDx5IBuHfvoWNlmWdRtp_GduOr068fujHQxshGYCiYsevTy8pMROlHWiu38eXwCVoK76c7cVR_J677f3tA8Lkf1zaYQg=w1116-h1672-s-no?authuser=0">
 
+          
+          </div>
+      </div>
+
+      <p style="margin-bottom:7pt;"></p>
+      <div class="cols3">
+        <div class="a1_1">
+          <img class="clicker" alt="猪名川、大阪"
+          src="https://lh3.googleusercontent.com/pw/AP1GczN8QVhJG5I5ctn5RPP2Nb3gnmX2zrDv4VvTzusazKHucv2Q02gOKQH8ybjDEzn_ocY2_ilaBzi4uj9gspcMPyyhUci80cjAG5GRwrL5vGh01u4xJlo9AF0PfsFHGfwRKyeM8bIxquW1_0v_VtxcDduPfg=w1124-h1672-s-no?authuser=0">
+        </div>
+        <div class="a1_24">
+          <img class="clicker" alt="猪名川、大阪"
+          src="https://lh3.googleusercontent.com/pw/AP1GczOs-ZxNcm27qv25KQYrO9JW63UUD12bzWnWXfk7ilwkjuXstH8zyDJrVCTF9YDHGGBx40FIROJpQ1en5JUZ2u833zjrThEnbMYyVGMqr2FXCLF2hOVOpqecYYjGmE_FkAoHZeY0NFYuavmuhkBQYeD22Q=w2532-h1672-s-no?authuser=0">
+        </div>
+      </div>
+      <p style="margin-bottom:7pt;"></p>
+
+      <div class="cols3">
+        <div class="a1_12">
+          <img class="clicker" alt="石橋、大阪"
+          src="https://lh3.googleusercontent.com/pw/AP1GczN47CS0xgdNtX2UriZQzMHYNDkxhKY6aQ6d9PbIo1RyECARNQbtWuoxIZo6ldIGQjfKJjfEHXupBu3Nb10H9DqnvWZ7zAUCwHWO9O-q-D22s6OCiVlgeLazanXShczdDacwYhIbFdwMyQCrlGTr8nIweQ=w2494-h1672-s-no?authuser=0">
+        </div>
+        <div class="a1_3">
+          <img class="clicker" alt="石橋、大阪"
+          src="https://lh3.googleusercontent.com/pw/AP1GczPD8iw0CwdIxW4A4LlPYSU0rpiXwVFA4RK-XAaqzxFLtRxd_vxXIaAIhmCH8-cTMvBYtYE0ciLDl2uTZI28EjEqy-ostlYHrMpSU3NRFzGb29rt15lW8astkS7KTBlZnBEyjHv4QTmDlgzK-_gUd5d26Q=w1118-h1672-s-no?authuser=0">
+        </div>
+      </div>
+      <p style="margin-bottom:7pt;"></p>
 
 
+    </div>
+
+
+
+
+    <div id="colour">
+      <div class="cols2">
+        <div class="a1_1">
+          <img class="clicker" alt="石橋、大阪"
+            src="https://lh3.googleusercontent.com/pw/AP1GczN6poMaTR1tngCqY455p1St6QLvpJphK0cLuQbRAXlDu9ExDVxa2n3VdZr1QElaW6bgM3QnKwueYpDG5CqtUj2mwAdCcaU2ZhGQsawmxO2TetzFJME8YE5uBlszH44f8WOk-A2Uqay60_g_7AOD4X6v7w=w1544-h1024-s-no?authuser=1">
+        </div>
+        <div class="a1_2">
+          <img class="clicker" alt="猪名川"
+            src="https://lh3.googleusercontent.com/pw/AP1GczMiwJSy6V-gnffihX9whmKlx6Ew38-dwI8egvGNhkn1fZlXEIkSe3ep-ZPYcHz6_vKaXnwB-ehLC6EFjYVeyNTfo5Bj-bVZt_JD_yqDQLWd_y0zHYxU0cM90_t1xn0Hb3-x8A3XF6mPLocDwNWpavrgvQ=w2512-h1672-s-no?authuser=1">
+        </div>
+      </div>
+
+      <p style="margin-bottom:7pt;"></p>
+      <div class="cols3">
+        <div class="a1_2">
+          <img class="clicker" alt="猪名川、大阪"
+            src="https://lh3.googleusercontent.com/pw/AP1GczNj90h3nBII_t_DEBnJqn9Ul6I8TEfyb7D373RrES3bKidS8L5riUfFIkhDsBljbMku7HM6NR99MfWWblezHt2Ve9g3OW7xNVI3spfXveTH8_peVrZFdZ6RX9M_gH0tt2w2WZWGrZeoNyKGp3ABpbuSwQ=w1112-h1672-s-no?authuser=1">
+        </div>
+        <div class="a1_1">
+          <img class="clicker" alt="猪名川、大阪"
+            src="https://lh3.googleusercontent.com/pw/AP1GczMwHsjNrLL_QAlL5SVTCvMBcft6aCvvOhRmwlMlCbSBDkwpib4o39k3pvi3lepVaW1Vqi7dasMtXDwJFn3BAc1Pt-9EoZO-_KfBsDsoUBJMe_HhCE6lDX0JRu4ET7HdXGA7aPjpi32VVmEcbgQZxbcU6A=w1112-h1672-s-no?authuser=1">
+        </div>
+        <div class="a1_3">
+          <img class="clicker" alt="東海村"
+            src="https://lh3.googleusercontent.com/pw/AP1GczPrGvL5pt1NOOg-_UMSMHIUqhySFhejY6yrpNCkouxtICY2Kb0JNDz8x61qzdhySUcFzwV-h0yRN7QyCZsnGDX8UKVsxe7UJBATDFuZdQy8MTN-YP0JEcZc8_UCyZKUkwu6yTGPXZyL5vLoOs1LUFg4Cw=w1112-h1672-s-no?authuser=1">
+        </div>
+        <div class="a1_3">
+          <img class="clicker" alt="東海村"
+            src="https://lh3.googleusercontent.com/pw/AP1GczPrGvL5pt1NOOg-_UMSMHIUqhySFhejY6yrpNCkouxtICY2Kb0JNDz8x61qzdhySUcFzwV-h0yRN7QyCZsnGDX8UKVsxe7UJBATDFuZdQy8MTN-YP0JEcZc8_UCyZKUkwu6yTGPXZyL5vLoOs1LUFg4Cw=w1112-h1672-s-no?authuser=1">
+        </div>
+      </div>
+
+      <p style="margin-bottom:7pt;"></p>
+      <div class="cols2">
+        <div class="a1_1">
+          <img class="clicker" alt="静岡"
+            src="https://lh3.googleusercontent.com/pw/AP1GczMT9hl7cfL70X6oOju8aqvcINumNymGqO0TSWhKBBbKKdaPqeSrTRs6CnszLNoPr8wn_9idQvhXuliDM1qzy-99HHiW6tqiY6yUZT6NIZ1s-hnkCTL0hwbUokJ71pTeaQFeJFva6k2Z_NdhOm4cj9sbrA=w2512-h1672-s-no?authuser=1">
+        </div>
+        <div class="a1_2">
+          <img class="clicker" alt="静岡"
+            src="https://lh3.googleusercontent.com/pw/AP1GczMSwFb4pIid9kn0Hv3qWUyzNLcTeFG_IXSXcmFIFJsJDFDNM1luW3FWBEeHMpIMOwQS_Gx7Oig5xak4B5xqawsB8S2oKj1btz8evM4Nzg_H3Bou0TIPyIC_pbpyw8m61nRp91883UXRfSXvdwKw5Q7l7Q=w2512-h1672-s-no?authuser=1">
+        </div>
+      </div>
+
+      <p style="margin-bottom:7pt;"></p>
+      <div class="cols3">
+        <div class="a1_2">
+          <img class="clicker" alt="大阪"
+            src="https://lh3.googleusercontent.com/pw/AP1GczOIib3d5szy7HapILtSGdGV5M88rhEv9Q7x2qCNt7x0aRQiKsODweE_Z_XKl0HSmKijAsvKRxXdTDZKJY7SKZROmYOUuDnC7TRGJA2q3EdDVTNj-BlDbBWLQtANItXlI7-3S9epDtHJi4JoRHT0vbf_QA=w1112-h1672-s-no?authuser=1">
+        </div>
+        <div class="a1_1">
+          <img class="clicker" alt="猪名川"
+            src="https://lh3.googleusercontent.com/pw/AP1GczMw5_78K0do_qUu6Umz10y5cX3xszHrkQCejvJp4dPonURhY_MbW9zFJozfKBmi01l56BfGScUfLgj7PlL1ZLOO6a7aCN2Zyr5Z61C2yaenyHezUySkuB0HYrv1Yghk6FHVu6mBWFeKqY_9IbmxVorEnA=w1112-h1672-s-no?authuser=1">
+        </div>
+      </div>
+      <p style="margin-bottom:7pt;"></p>
+    </div>
+
+    
+
+
+
+    <!--    <div class="row"> -->
+    <!--      <div class="column"> -->
+    <!--        <img class="clicker" alt="石橋、大阪" src="https://lh3.googleusercontent.com/pw/AP1GczN6poMaTR1tngCqY455p1St6QLvpJphK0cLuQbRAXlDu9ExDVxa2n3VdZr1QElaW6bgM3QnKwueYpDG5CqtUj2mwAdCcaU2ZhGQsawmxO2TetzFJME8YE5uBlszH44f8WOk-A2Uqay60_g_7AOD4X6v7w=w1544-h1024-s-no?authuser=1" > -->
+    <!--        <img class="clicker" alt="猪名川、大阪" src="https://lh3.googleusercontent.com/pw/AP1GczMwHsjNrLL_QAlL5SVTCvMBcft6aCvvOhRmwlMlCbSBDkwpib4o39k3pvi3lepVaW1Vqi7dasMtXDwJFn3BAc1Pt-9EoZO-_KfBsDsoUBJMe_HhCE6lDX0JRu4ET7HdXGA7aPjpi32VVmEcbgQZxbcU6A=w1112-h1672-s-no?authuser=1"> -->
+    <!--        <img class="clicker" alt="大阪" src="https://lh3.googleusercontent.com/pw/AP1GczOIib3d5szy7HapILtSGdGV5M88rhEv9Q7x2qCNt7x0aRQiKsODweE_Z_XKl0HSmKijAsvKRxXdTDZKJY7SKZROmYOUuDnC7TRGJA2q3EdDVTNj-BlDbBWLQtANItXlI7-3S9epDtHJi4JoRHT0vbf_QA=w1112-h1672-s-no?authuser=1"> -->
+    <!--      </div> -->
+    <!--      <div class="column"> -->
+    <!--        <img class="clicker" alt="猪名川、大阪" src="https://lh3.googleusercontent.com/pw/AP1GczNj90h3nBII_t_DEBnJqn9Ul6I8TEfyb7D373RrES3bKidS8L5riUfFIkhDsBljbMku7HM6NR99MfWWblezHt2Ve9g3OW7xNVI3spfXveTH8_peVrZFdZ6RX9M_gH0tt2w2WZWGrZeoNyKGp3ABpbuSwQ=w1112-h1672-s-no?authuser=1"> -->
+    <!--        <img class="clicker" alt="東海村" src="https://lh3.googleusercontent.com/pw/AP1GczPrGvL5pt1NOOg-_UMSMHIUqhySFhejY6yrpNCkouxtICY2Kb0JNDz8x61qzdhySUcFzwV-h0yRN7QyCZsnGDX8UKVsxe7UJBATDFuZdQy8MTN-YP0JEcZc8_UCyZKUkwu6yTGPXZyL5vLoOs1LUFg4Cw=w1112-h1672-s-no?authuser=1"> -->
+    <!--        <img class="clicker" alt="静岡" src="https://lh3.googleusercontent.com/pw/AP1GczMSwFb4pIid9kn0Hv3qWUyzNLcTeFG_IXSXcmFIFJsJDFDNM1luW3FWBEeHMpIMOwQS_Gx7Oig5xak4B5xqawsB8S2oKj1btz8evM4Nzg_H3Bou0TIPyIC_pbpyw8m61nRp91883UXRfSXvdwKw5Q7l7Q=w2512-h1672-s-no?authuser=1"> -->
+    <!--      </div> -->
+    <!--      <div class="column"> -->
+    <!--        <img class="clicker" alt="猪名川" src="https://lh3.googleusercontent.com/pw/AP1GczMiwJSy6V-gnffihX9whmKlx6Ew38-dwI8egvGNhkn1fZlXEIkSe3ep-ZPYcHz6_vKaXnwB-ehLC6EFjYVeyNTfo5Bj-bVZt_JD_yqDQLWd_y0zHYxU0cM90_t1xn0Hb3-x8A3XF6mPLocDwNWpavrgvQ=w2512-h1672-s-no?authuser=1"> -->
+    <!--        <img class="clicker" alt="猪名川" src="https://lh3.googleusercontent.com/pw/AP1GczMw5_78K0do_qUu6Umz10y5cX3xszHrkQCejvJp4dPonURhY_MbW9zFJozfKBmi01l56BfGScUfLgj7PlL1ZLOO6a7aCN2Zyr5Z61C2yaenyHezUySkuB0HYrv1Yghk6FHVu6mBWFeKqY_9IbmxVorEnA=w1112-h1672-s-no?authuser=1"> -->
+    <!--        <img class="clicker" alt="静岡" src="https://lh3.googleusercontent.com/pw/AP1GczMT9hl7cfL70X6oOju8aqvcINumNymGqO0TSWhKBBbKKdaPqeSrTRs6CnszLNoPr8wn_9idQvhXuliDM1qzy-99HHiW6tqiY6yUZT6NIZ1s-hnkCTL0hwbUokJ71pTeaQFeJFva6k2Z_NdhOm4cj9sbrA=w2512-h1672-s-no?authuser=1"> -->
+    <!--      </div> -->
+    <!--    </div>  -->
+
+
+    <div id="bw">
+
+      <div class="cols3">
+        <div class="a1_1">
+          <img class="clicker" alt="岡町、大阪"
+            src="https://lh3.googleusercontent.com/pw/AP1GczPWNCkDRnw1GgCcgzWXdrD-8fHcBWnTsSh7d0Tx62xDX1s8LvS85HXzPS9pdYWVXqqBqT2GbPgA6yBtcdwn673j9y2_n1R1QyamH__kUAvF8vILJ0_4llT19FkbNJgNfzygY3msX_cUCWKDePwmdCcUmA=w1114-h1672-s-no?authuser=1">
+        </div>
+        <div class="a1_2">
+          <img class="clicker" alt="IPMU、東京"
+            src="https://lh3.googleusercontent.com/pw/AP1GczMUT11hczsXboVKOPkkIg0dxpuvzr-Ml-C1oJAr2sMW0bAGfUlFJOwXTUWmJl6XTHZ-TknTBtiRsWE0BKmMlAusPuAPUDLfwc_X2cjON8Rng9KEyuiS4rR9Hf9ke6ZxK-Sn7bz6Y_C33SHqFfQBhsswng=w1122-h1672-s-no?authuser=1">
+        </div>
+        <div class="a1_3">
+          <img class="clicker" alt="大阪"
+            src="https://lh3.googleusercontent.com/pw/AP1GczPn02KpFNI8x3sTIvWWOO1iajLqyItIFMGtZJGDylXeSVb3rdwpHw09YNAfzolknbrW66yP3rp7wPWxWOxGyhOWpm8qM90Iddu995HbYusc-Xo6i_fGiyWKg_yGazHkKmgBaLJe2h726O4ELSUIpn2ylg=w1112-h1672-s-no?authuser=0">
+        </div>
+        <div class="a2_1">
+          <img class="clicker" alt="J-PARC、茨城県"
+            src="https://lh3.googleusercontent.com/pw/AP1GczO8hhYC8aaClVnyJci2A52Bl56fpd8VKrpdPYtrCLB7d3Q6OlL01LPc0Q1CRMUNgg7voxZHe7USsH4tCoWIjnnRD4WSm5wEgHOZAkgdVAaJ_aKOCjRh3RF_WWzCOmW5zAkKbHMoo_gZ-k5noch_f4GZPw=w1112-h1672-s-no?authuser=1">
+        </div>
+        <div class="a2_2">
+          <img class="clicker" alt="東海村、茨城県"
+            src="https://lh3.googleusercontent.com/pw/AP1GczPfvvgXbTe8B2unq_MmAOdSbE4V6iLzq2ZAlSDLnVFXfImkjQdE1FqilG_3kLouzpuvzt00yV80wcSEai3XXjL_lWtPGelmjDhwgqxSF8MozER491Pq3dwWIOcfQShQDkyZMHSR7lpSzXvODPwZV18JUA=w1112-h1672-s-no?authuser=1">
+        </div>
+        <div class="a2_3">
+          <img class="clicker" alt="大阪"
+            src="https://lh3.googleusercontent.com/pw/AP1GczOKfDCNiOCei3uVkKaI0aK2mMfFOJTcy6djV_n0QnJJdO-V_pOOblt4MWnWu5I0aMwbM4c0xK7-NVmdvxEU6200UK1NIyfXuFMAuRHVsukKKVyGqZCLuMkfbn1K0CUKjJ4e8Sle4Ah6xf3J0JLrTdzsLQ=w1118-h1672-s-no?authuser=1">
+        </div>
+        <div class="a3_12">
+          <img class="clicker" alt="東海村、茨城県"
+            src="https://lh3.googleusercontent.com/pw/AP1GczNbnQkNNjfm_xJJhMl5nxKkfVdEqVzQD2-HeH6mnXTHJcQjEUyhpw4AH54AlZXz96Z3ISpJ2-POnA_Wo1Z4ZfFNtxP7Si_Mi5QxyBEqjcTDNMwe6RoMGqDkCPO3-dZLbwb0p5ipji9dnGx11lQxJDPAgg=w2512-h1672-s-no?authuser=1">
+        </div>
+      </div>
+
+    </div>
   </div>
+
 
   <script src="pages/photos/js/main.js"></script>
 

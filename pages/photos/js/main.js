@@ -41,3 +41,93 @@ $(document).keydown(function(e) {
   }
 });
 
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  let myBtns=document.querySelectorAll('.button');
+  myBtns.forEach(function(btn) {
+
+      btn.addEventListener('click', () => {
+        console.log('clicked');
+
+        
+        // add active class to the button that was clicked
+
+        myBtns.forEach(b => b.classList.remove('active'));
+
+      });
+
+  });
+
+});
+
+
+
+function hideAll(){
+  var bw = document.getElementById("infrared");
+  var col = document.getElementById("colour");
+  var ir = document.getElementById("bw");
+
+  bw.style.display = "none";
+  col.style.display = "none";
+  ir.style.display = "none";
+
+  // undo all buttons border
+  var button_colour = document.getElementsByClassName("button_colour");
+  button_colour[0].style.border = "2px solid #ffffff";
+  var button_ir = document.getElementsByClassName("button_ir");
+  button_ir[0].style.border = "2px solid #ffffff";
+  var button_bw = document.getElementsByClassName("button_bw");
+  button_bw[0].style.border = "2px solid #ffffff";
+
+
+
+
+
+}
+
+function showColor(){
+  var x = document.getElementById("colour");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "block";
+  }
+
+  // change button_colour border
+  var button_colour = document.getElementsByClassName("button_colour");
+  button_colour[0].style.border = "2px solid #0064e6";
+}
+
+function showBlackAndWhite(){
+  var x = document.getElementById("bw");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "block";
+  }
+
+  // change button_bw border
+  var button_bw = document.getElementsByClassName("button_bw");
+  button_bw[0].style.border = "2px solid #000000";
+}
+
+function showInfrared(){
+  var x = document.getElementById("infrared");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "block";
+  }
+
+  // change button_ir border
+  var button_ir = document.getElementsByClassName("button_ir");
+  button_ir[0].style.border = "2px solid #6d0000";
+}
+
+
+
+
+
+
