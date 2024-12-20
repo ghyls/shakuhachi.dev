@@ -95,6 +95,9 @@ function showColor(){
     x.style.display = "block";
   }
 
+  // change page hash to colour
+  history.pushState(null, null, '#colour');
+
   // change button_colour border
   var button_colour = document.getElementsByClassName("button_colour");
   button_colour[0].style.border = "2px solid #0064e6";
@@ -107,6 +110,9 @@ function showBlackAndWhite(){
   } else {
     x.style.display = "block";
   }
+
+  // change page hash to bw
+  history.pushState(null, null, '#bw');
 
   // change button_bw border
   var button_bw = document.getElementsByClassName("button_bw");
@@ -121,9 +127,44 @@ function showInfrared(){
     x.style.display = "block";
   }
 
+  // change page hash to ir
+  history.pushState(null, null, '#ir');
+
   // change button_ir border
   var button_ir = document.getElementsByClassName("button_ir");
   button_ir[0].style.border = "2px solid #6d0000";
+}
+
+window.onload = function() {
+
+  // check url for hash
+  if (window.location.hash) {
+    var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+    if (hash == "bw") {
+      hideAll();
+      showBlackAndWhite();
+    } else if (hash == "ir") {
+      hideAll();
+      showInfrared();
+    } else {
+      hideAll();
+      showColor();
+    }
+  }
+  else {
+    // default
+    hideAll();
+    showColor();
+  }
+
+  // go to top of page
+
+  window.scrollTo(0, 0);
+
+
+
+
+
 }
 
 
