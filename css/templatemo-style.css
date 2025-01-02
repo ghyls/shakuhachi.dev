@@ -76,6 +76,7 @@ blockquote:after {
 
 table {
   border-collapse: collapse;
+  white-space: nowrap;
   border-spacing: 0;
 }
 
