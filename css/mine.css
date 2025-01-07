@@ -9,15 +9,18 @@ tr:hover {
 
 
 .site-bg {
-  position: fixed;
   top: 0;
   height: 100%;
   width: 100%;
   z-index: 0;
   background-image: url(../images/bg.jpg);
-  background-size: cover;
+  
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
+
+  position: fixed;
 }
 .site-bg-overlay {
   position: fixed;
