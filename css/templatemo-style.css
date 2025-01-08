@@ -54,9 +54,7 @@ main {
   display: block;
 }
 
-body {
-  line-height: 1;
-}
+
 
 ol,
 ul {
@@ -74,11 +72,6 @@ blockquote:after {
   content: none;
 }
 
-table {
-  border-collapse: collapse;
-  white-space: nowrap;
-  border-spacing: 0;
-}
 
 html {
   font-size: 100%;

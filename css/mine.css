@@ -6,6 +6,39 @@ tr:hover {
   background-color: #321b1b43
 }
 
+th, td {
+  padding: 4px;
+  border: 1px solid #ddd;
+}
+
+
+
+.m_table-title {
+  position: relative;
+  margin-top: 60px;
+  text-align: left;
+  font-size: 18px;
+}
+
+.m_table {
+  width: 100%;
+  border-collapse: collapse;
+  border:1px solid #ddd;
+  white-space: nowrap;
+  border-spacing: 0;
+}
+
+.m_table-container {
+  width: 100%; /* Adjust container width to the screen size */
+  overflow-x: auto; /* Enables horizontal scrolling */
+}
+
+
+.body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scrolling for the entire page */
+}
 
 
 .site-bg {
