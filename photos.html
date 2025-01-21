@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="js/vendor/modernizr-2.6.2.min.js"></script>
   <script src="js/vendor/jquery-1.10.2.min.js"></script>
-  <script src="js/main.js"></script>
   <link rel="stylesheet" href="css/templatemo-style.css">
   <link rel="stylesheet" type="text/css" href="pages/photos/css/style.css">
 
@@ -55,10 +54,10 @@
   <div class="container" id="page-content">
 
     <!-- The Modal -->
-    <div id="myModal" class="modal">
-      <img class="modal-content" id="img01">
-      <div id="caption"></div>
-    </div>
+    <!--<div id="myModal" class="modal">-->
+      <!--<img class="modal-content" id="img01">-->
+      <!--<div id="caption"></div>-->
+    <!--</div>-->
 
     <div class="text-center">
       <br>
@@ -88,121 +87,138 @@
 
     <br><br>
 
+    <div id="lightbox" class="hidden">
+      <span id="close"></span>
+      <img id="lightbox-img" src="" data-caption="">
+      <span id="prev" class="arrow"></span>
+      <span id="next" class="arrow"></span>
+      <div id="caption"></div> <!-- This will show the caption -->
+    </div>
+    
     <div id="infrared">
       <div class="cols3">
         <div class="a1_12">
-          <img class="clicker" alt="石橋、大阪"
-            src="https://lh3.googleusercontent.com/pw/AP1GczNGw-aU8p1k9K6QolY7DFaVYWhRz3mKFrqfsRr4jTaWEO2qxO3DbAOzI8tKe5q02v1edGCyId2PDgaaQZuPxVwPa_62kDd5uOilDNR4CbzjLIYQtuOVe11ORFHtWGAd2GrAzpJA33PusX2-JhACPVpIwQ=w2504-h1672-s-no?authuser=0", loading="lazy">
+          <img class="clicker" data-caption="石橋、大阪"
+            src="https://lh3.googleusercontent.com/pw/AP1GczNGw-aU8p1k9K6QolY7DFaVYWhRz3mKFrqfsRr4jTaWEO2qxO3DbAOzI8tKe5q02v1edGCyId2PDgaaQZuPxVwPa_62kDd5uOilDNR4CbzjLIYQtuOVe11ORFHtWGAd2GrAzpJA33PusX2-JhACPVpIwQ=w2504-h1672-s-no?authuser=0" loading="lazy">
         </div>
         <div class="a1_3">
-          <img class="clicker" alt="猪名川"
-          src="https://lh3.googleusercontent.com/pw/AP1GczM3odPor4X1FzxgRNZ45ByOEiKLiB9WjCUwPZy6ODLud7mftWetUC97KVc3tDZDx5IBuHfvoWNlmWdRtp_GduOr068fujHQxshGYCiYsevTy8pMROlHWiu38eXwCVoK76c7cVR_J677f3tA8Lkf1zaYQg=w1116-h1672-s-no?authuser=0", loading="lazy">
+          <img class="clicker" data-caption="猪名川"
+          src="https://lh3.googleusercontent.com/pw/AP1GczM3odPor4X1FzxgRNZ45ByOEiKLiB9WjCUwPZy6ODLud7mftWetUC97KVc3tDZDx5IBuHfvoWNlmWdRtp_GduOr068fujHQxshGYCiYsevTy8pMROlHWiu38eXwCVoK76c7cVR_J677f3tA8Lkf1zaYQg=w1116-h1672-s-no?authuser=0" loading="lazy">
           </div>
       </div>
 
       <p style="margin-bottom:7pt;"></p>
       <div class="cols3">
         <div class="a1_1">
-          <img class="clicker" alt="猪名川、大阪"
-          src="https://lh3.googleusercontent.com/pw/AP1GczN8QVhJG5I5ctn5RPP2Nb3gnmX2zrDv4VvTzusazKHucv2Q02gOKQH8ybjDEzn_ocY2_ilaBzi4uj9gspcMPyyhUci80cjAG5GRwrL5vGh01u4xJlo9AF0PfsFHGfwRKyeM8bIxquW1_0v_VtxcDduPfg=w1124-h1672-s-no?authuser=0", loading="lazy">
+          <img class="clicker" data-caption="猪名川、大阪"
+          src="https://lh3.googleusercontent.com/pw/AP1GczN8QVhJG5I5ctn5RPP2Nb3gnmX2zrDv4VvTzusazKHucv2Q02gOKQH8ybjDEzn_ocY2_ilaBzi4uj9gspcMPyyhUci80cjAG5GRwrL5vGh01u4xJlo9AF0PfsFHGfwRKyeM8bIxquW1_0v_VtxcDduPfg=w1124-h1672-s-no?authuser=0" loading="lazy">
         </div>
         <div class="a1_24">
-          <img class="clicker" alt="猪名川、大阪"
-          src="https://lh3.googleusercontent.com/pw/AP1GczOs-ZxNcm27qv25KQYrO9JW63UUD12bzWnWXfk7ilwkjuXstH8zyDJrVCTF9YDHGGBx40FIROJpQ1en5JUZ2u833zjrThEnbMYyVGMqr2FXCLF2hOVOpqecYYjGmE_FkAoHZeY0NFYuavmuhkBQYeD22Q=w2532-h1672-s-no?authuser=0", loading="lazy">
+          <img class="clicker" data-caption="猪名川、大阪"
+          src="https://lh3.googleusercontent.com/pw/AP1GczOs-ZxNcm27qv25KQYrO9JW63UUD12bzWnWXfk7ilwkjuXstH8zyDJrVCTF9YDHGGBx40FIROJpQ1en5JUZ2u833zjrThEnbMYyVGMqr2FXCLF2hOVOpqecYYjGmE_FkAoHZeY0NFYuavmuhkBQYeD22Q=w2532-h1672-s-no?authuser=0" loading="lazy">
         </div>
       </div>
       <p style="margin-bottom:7pt;"></p>
 
       <div class="cols3">
         <div class="a1_12">
-          <img class="clicker" alt="石橋、大阪"
-          src="https://lh3.googleusercontent.com/pw/AP1GczN47CS0xgdNtX2UriZQzMHYNDkxhKY6aQ6d9PbIo1RyECARNQbtWuoxIZo6ldIGQjfKJjfEHXupBu3Nb10H9DqnvWZ7zAUCwHWO9O-q-D22s6OCiVlgeLazanXShczdDacwYhIbFdwMyQCrlGTr8nIweQ=w2494-h1672-s-no?authuser=0", loading="lazy">
+          <img class="clicker" data-caption="石橋、大阪"
+          src="https://lh3.googleusercontent.com/pw/AP1GczN47CS0xgdNtX2UriZQzMHYNDkxhKY6aQ6d9PbIo1RyECARNQbtWuoxIZo6ldIGQjfKJjfEHXupBu3Nb10H9DqnvWZ7zAUCwHWO9O-q-D22s6OCiVlgeLazanXShczdDacwYhIbFdwMyQCrlGTr8nIweQ=w2494-h1672-s-no?authuser=0" loading="lazy">
         </div>
         <div class="a1_3">
-          <img class="clicker" alt="石橋、大阪"
-          src="https://lh3.googleusercontent.com/pw/AP1GczPD8iw0CwdIxW4A4LlPYSU0rpiXwVFA4RK-XAaqzxFLtRxd_vxXIaAIhmCH8-cTMvBYtYE0ciLDl2uTZI28EjEqy-ostlYHrMpSU3NRFzGb29rt15lW8astkS7KTBlZnBEyjHv4QTmDlgzK-_gUd5d26Q=w1118-h1672-s-no?authuser=0", loading="lazy">
+          <img class="clicker" data-caption="石橋、大阪"
+          src="https://lh3.googleusercontent.com/pw/AP1GczPD8iw0CwdIxW4A4LlPYSU0rpiXwVFA4RK-XAaqzxFLtRxd_vxXIaAIhmCH8-cTMvBYtYE0ciLDl2uTZI28EjEqy-ostlYHrMpSU3NRFzGb29rt15lW8astkS7KTBlZnBEyjHv4QTmDlgzK-_gUd5d26Q=w1118-h1672-s-no?authuser=0" loading="lazy">
         </div>
       </div>
       <p style="margin-bottom:7pt;"></p>
 
 
+      
     </div>
-
-
-
+    
 
     <div id="colour">
 
       <div class="cols3">
         <div class="a1_1">
-          <img class="clicker" alt="大阪大学、日本. Fujifilm 400"
-            src="https://lh3.googleusercontent.com/pw/AP1GczNUh-C9NGZTs88CD5Mwd_K_5xn1D5DDpevf6QN8kTbAhZtH7Ax19XYFsUQgM6CRDF3ZBdKMJJiIoUR6DWEWOCmGmSLCVCh6gvCAD1TOUM162MUg4P05oZvk-pxJSXwJqsirv6JGEfnCJHf4ha-pqWdxWQ=w1112-h1672-s-no?authuser=0", loading="lazy">
+          <img class="clicker" data-caption="大阪大学、日本. Fujifilm 400"
+            src="https://lh3.googleusercontent.com/pw/AP1GczNUh-C9NGZTs88CD5Mwd_K_5xn1D5DDpevf6QN8kTbAhZtH7Ax19XYFsUQgM6CRDF3ZBdKMJJiIoUR6DWEWOCmGmSLCVCh6gvCAD1TOUM162MUg4P05oZvk-pxJSXwJqsirv6JGEfnCJHf4ha-pqWdxWQ=w1112-h1672-s-no?authuser=0" loading="lazy">
         </div>
         <div class="a1_2">
-          <img class="clicker" alt="Seoul, South Korea. Fujifilm 400"
-            src="https://lh3.googleusercontent.com/pw/AP1GczOD97NDYP05PzidkQKP7XCIZlo_0pqrNMAssiBeOT2QjzdBHLkmpGo6L-eDf5x-RjybAKo8V-nlfNTyxXLmLLyM9rpY1zFOXXD2hwDVSIMlPFNtB9bZJwwXS5JM5ukBtvULoj6G9k2za1ntMtuIJZZy0Q=w1112-h1672-s-no?authuser=0", loading="lazy">
+          <img class="clicker" data-caption="Seoul, South Korea. Fujifilm 400"
+            src="https://lh3.googleusercontent.com/pw/AP1GczOD97NDYP05PzidkQKP7XCIZlo_0pqrNMAssiBeOT2QjzdBHLkmpGo6L-eDf5x-RjybAKo8V-nlfNTyxXLmLLyM9rpY1zFOXXD2hwDVSIMlPFNtB9bZJwwXS5JM5ukBtvULoj6G9k2za1ntMtuIJZZy0Q=w1112-h1672-s-no?authuser=0" loading="lazy">
         </div>
         <div class="a1_3">
-          <img class="clicker" alt="大阪. Fujifilm 400"
-            src="https://lh3.googleusercontent.com/pw/AP1GczO4y-K-I1802wiV2zQ8qsxJg1oY5btd5MLTaak3SLA6TSLWwUL2ZN5tmZnaQHDCRHZL2AKki0rP3ImgNs8_eOAddoihGwlzXOCNRSNHACDlr4YiIKiavywxxsnw1FmD-sp3-Qlxxyy60s5-XveZaWhZcw=w1112-h1672-s-no?authuser=0", loading="lazy">
+          <img class="clicker" data-caption="大阪. Fujifilm 400"
+            src="https://lh3.googleusercontent.com/pw/AP1GczO4y-K-I1802wiV2zQ8qsxJg1oY5btd5MLTaak3SLA6TSLWwUL2ZN5tmZnaQHDCRHZL2AKki0rP3ImgNs8_eOAddoihGwlzXOCNRSNHACDlr4YiIKiavywxxsnw1FmD-sp3-Qlxxyy60s5-XveZaWhZcw=w1112-h1672-s-no?authuser=0" loading="lazy">
         </div>
       </div>
 
       <p style="margin-bottom:7pt;"></p>
       <div class="cols2">
         <div class="a1_1">
-          <img class="clicker" alt="石橋、大阪"
-            src="https://lh3.googleusercontent.com/pw/AP1GczN6poMaTR1tngCqY455p1St6QLvpJphK0cLuQbRAXlDu9ExDVxa2n3VdZr1QElaW6bgM3QnKwueYpDG5CqtUj2mwAdCcaU2ZhGQsawmxO2TetzFJME8YE5uBlszH44f8WOk-A2Uqay60_g_7AOD4X6v7w=w1544-h1024-s-no?authuser=1", loading="lazy">
+          <img class="clicker" data-caption="石橋、大阪"
+            src="https://lh3.googleusercontent.com/pw/AP1GczN6poMaTR1tngCqY455p1St6QLvpJphK0cLuQbRAXlDu9ExDVxa2n3VdZr1QElaW6bgM3QnKwueYpDG5CqtUj2mwAdCcaU2ZhGQsawmxO2TetzFJME8YE5uBlszH44f8WOk-A2Uqay60_g_7AOD4X6v7w=w1544-h1024-s-no?authuser=1" loading="lazy">
         </div>
         <div class="a1_2">
-          <img class="clicker" alt="Prague, Czech Republic. Fujifilm Superia X-TRA 400"
-            src="https://lh3.googleusercontent.com/pw/AP1GczP-uHUgA81doT_YO4cNXPBwZqHBDNh82DBtdcBL7m2KecTxkH7Bze1O0f2wOuxU1LDy88TKVWQXNd-izff3J0RDByd0bhqFogZAgIF76aBO6cvcnzD2ydDymugfJJw7olUo1hmr9ffxk3UONEpQetjoow=w2220-h1478-s-no?authuser=0", loading="lazy">
+          <img class="clicker" data-caption="Prague, Czech Republic. Fujifilm Superia X-TRA 400"
+            src="https://lh3.googleusercontent.com/pw/AP1GczP-uHUgA81doT_YO4cNXPBwZqHBDNh82DBtdcBL7m2KecTxkH7Bze1O0f2wOuxU1LDy88TKVWQXNd-izff3J0RDByd0bhqFogZAgIF76aBO6cvcnzD2ydDymugfJJw7olUo1hmr9ffxk3UONEpQetjoow=w2220-h1478-s-no?authuser=0" loading="lazy">
         </div>
       </div>
 
       <p style="margin-bottom:7pt;"></p>
       <div class="cols3">
         <div class="a1_1">
-          <img class="clicker" alt="猪名川、大阪"
-            src="https://lh3.googleusercontent.com/pw/AP1GczMwHsjNrLL_QAlL5SVTCvMBcft6aCvvOhRmwlMlCbSBDkwpib4o39k3pvi3lepVaW1Vqi7dasMtXDwJFn3BAc1Pt-9EoZO-_KfBsDsoUBJMe_HhCE6lDX0JRu4ET7HdXGA7aPjpi32VVmEcbgQZxbcU6A=w1112-h1672-s-no?authuser=1", loading="lazy">
+          <img class="clicker" data-caption="猪名川、大阪"
+            src="https://lh3.googleusercontent.com/pw/AP1GczMwHsjNrLL_QAlL5SVTCvMBcft6aCvvOhRmwlMlCbSBDkwpib4o39k3pvi3lepVaW1Vqi7dasMtXDwJFn3BAc1Pt-9EoZO-_KfBsDsoUBJMe_HhCE6lDX0JRu4ET7HdXGA7aPjpi32VVmEcbgQZxbcU6A=w1112-h1672-s-no?authuser=1" loading="lazy">
         </div>
         <div class="a1_2">
-          <img class="clicker" alt="Incheon, South Korea. Fujifilm 400"
-            src="https://lh3.googleusercontent.com/pw/AP1GczPGje1KnvtBcZgRna6B2wpQbgujW76VOeGI6I-aa3j02ZKd50mU2PLwNgSIVUvM8f3uAh0O3Zhz6e21mGzi2fyAY4xxGXVAgZWy-s0zm8OTD7fItkgIlFk5k7qurHj6qritXq7NKhkcusD8UeU61YgQ6w=w1112-h1672-s-no?authuser=0", loading="lazy">
+          <img class="clicker" data-caption="Incheon, South Korea. Fujifilm 400"
+            src="https://lh3.googleusercontent.com/pw/AP1GczPGje1KnvtBcZgRna6B2wpQbgujW76VOeGI6I-aa3j02ZKd50mU2PLwNgSIVUvM8f3uAh0O3Zhz6e21mGzi2fyAY4xxGXVAgZWy-s0zm8OTD7fItkgIlFk5k7qurHj6qritXq7NKhkcusD8UeU61YgQ6w=w1112-h1672-s-no?authuser=0" loading="lazy">
         </div>
         <div class="a1_3">
-          <img class="clicker" alt="Seoul, South Korea. Fujifilm 400"
-            src="https://lh3.googleusercontent.com/pw/AP1GczOYJNMDil91_8WEgj7Wmb8XE9NBvuuw0QcSsTPa_j4_uEFd10nAiI34uZ3oyf-YBhub3Ib9mBmJINM9xfqrHHMEn00FiW5RMlAPRY7MLtriDZVWE5305jFqfYId8BIZPcz6d0gVkVwFO3PkZT1uxp-BRg=w1112-h1672-s-no?authuser=0", loading="lazy">
+          <img class="clicker" data-caption="Seoul, South Korea. Fujifilm 400"
+            src="https://lh3.googleusercontent.com/pw/AP1GczOYJNMDil91_8WEgj7Wmb8XE9NBvuuw0QcSsTPa_j4_uEFd10nAiI34uZ3oyf-YBhub3Ib9mBmJINM9xfqrHHMEn00FiW5RMlAPRY7MLtriDZVWE5305jFqfYId8BIZPcz6d0gVkVwFO3PkZT1uxp-BRg=w1112-h1672-s-no?authuser=0" loading="lazy">
         </div>
       </div>
 
       <p style="margin-bottom:7pt;"></p>
       <div class="cols2">
         <div class="a1_1">
-          <img class="clicker" alt="静岡"
-            src="https://lh3.googleusercontent.com/pw/AP1GczMT9hl7cfL70X6oOju8aqvcINumNymGqO0TSWhKBBbKKdaPqeSrTRs6CnszLNoPr8wn_9idQvhXuliDM1qzy-99HHiW6tqiY6yUZT6NIZ1s-hnkCTL0hwbUokJ71pTeaQFeJFva6k2Z_NdhOm4cj9sbrA=w2512-h1672-s-no?authuser=1", loading="lazy">
+          <img class="clicker" data-caption="静岡"
+            src="https://lh3.googleusercontent.com/pw/AP1GczMT9hl7cfL70X6oOju8aqvcINumNymGqO0TSWhKBBbKKdaPqeSrTRs6CnszLNoPr8wn_9idQvhXuliDM1qzy-99HHiW6tqiY6yUZT6NIZ1s-hnkCTL0hwbUokJ71pTeaQFeJFva6k2Z_NdhOm4cj9sbrA=w2512-h1672-s-no?authuser=1" loading="lazy">
         </div>
         <div class="a1_2">
-          <img class="clicker" alt="静岡"
-            src="https://lh3.googleusercontent.com/pw/AP1GczMSwFb4pIid9kn0Hv3qWUyzNLcTeFG_IXSXcmFIFJsJDFDNM1luW3FWBEeHMpIMOwQS_Gx7Oig5xak4B5xqawsB8S2oKj1btz8evM4Nzg_H3Bou0TIPyIC_pbpyw8m61nRp91883UXRfSXvdwKw5Q7l7Q=w2512-h1672-s-no?authuser=1", loading="lazy">
+          <img class="clicker" data-caption="静岡"
+            src="https://lh3.googleusercontent.com/pw/AP1GczMSwFb4pIid9kn0Hv3qWUyzNLcTeFG_IXSXcmFIFJsJDFDNM1luW3FWBEeHMpIMOwQS_Gx7Oig5xak4B5xqawsB8S2oKj1btz8evM4Nzg_H3Bou0TIPyIC_pbpyw8m61nRp91883UXRfSXvdwKw5Q7l7Q=w2512-h1672-s-no?authuser=1" loading="lazy">
         </div>
       </div>
 
       <p style="margin-bottom:7pt;"></p>
       <div class="cols3">
         <div class="a1_2">
-          <img class="clicker" alt="大阪"
-            src="https://lh3.googleusercontent.com/pw/AP1GczOIib3d5szy7HapILtSGdGV5M88rhEv9Q7x2qCNt7x0aRQiKsODweE_Z_XKl0HSmKijAsvKRxXdTDZKJY7SKZROmYOUuDnC7TRGJA2q3EdDVTNj-BlDbBWLQtANItXlI7-3S9epDtHJi4JoRHT0vbf_QA=w1112-h1672-s-no?authuser=1", loading="lazy">
+          <img class="clicker" data-caption="大阪"
+            src="https://lh3.googleusercontent.com/pw/AP1GczOIib3d5szy7HapILtSGdGV5M88rhEv9Q7x2qCNt7x0aRQiKsODweE_Z_XKl0HSmKijAsvKRxXdTDZKJY7SKZROmYOUuDnC7TRGJA2q3EdDVTNj-BlDbBWLQtANItXlI7-3S9epDtHJi4JoRHT0vbf_QA=w1112-h1672-s-no?authuser=1" loading="lazy">
         </div>
         <div class="a1_1">
-          <img class="clicker" alt="猪名川. Fujifilm Superia X-TRA 400"
-            src="https://lh3.googleusercontent.com/pw/AP1GczPLC-I6TtxpjEqmAf7vQq4Pyoa5_3Yyfx6zkQSmnPLGlv5i1xNs9Hn5T98AVtiSumoA10W2KSXKEzyp3f2Ofu1pI1Cg6OR87AnZho9yC7r_IbmHTAcYNaSXSyF2teCv46isTssLwuSr6MzETQo6iyG7bg=w1112-h1672-s-no?authuser=0", loading="lazy">
+          <img class="clicker" data-caption="猪名川. Fujifilm Superia X-TRA 400"
+            src="https://lh3.googleusercontent.com/pw/AP1GczPLC-I6TtxpjEqmAf7vQq4Pyoa5_3Yyfx6zkQSmnPLGlv5i1xNs9Hn5T98AVtiSumoA10W2KSXKEzyp3f2Ofu1pI1Cg6OR87AnZho9yC7r_IbmHTAcYNaSXSyF2teCv46isTssLwuSr6MzETQo6iyG7bg=w1112-h1672-s-no?authuser=0" loading="lazy">
         </div>
         <div class="a1_3">
-          <img class="clicker" alt="Prague, Czech Republic. Fujifilm Superia X-TRA 400"
-            src="https://lh3.googleusercontent.com/pw/AP1GczObxShUatN2muVdtlPeOnYmKupz3XU10L6N6WS9OzwbR--6zvnd4bt4HnnyWvz3276GPkV0AdljBHiRPrzt0_zcwKs7051_cebwFUxAa7paIjyViyxpZVeH76WiBEln-IloXGB-a3gI0T50_zGtIp8z1A=w1112-h1672-s-no?authuser=0", loading="lazy">
+          <img class="clicker" data-caption="Prague, Czech Republic. Fujifilm Superia X-TRA 400"
+            src="https://lh3.googleusercontent.com/pw/AP1GczObxShUatN2muVdtlPeOnYmKupz3XU10L6N6WS9OzwbR--6zvnd4bt4HnnyWvz3276GPkV0AdljBHiRPrzt0_zcwKs7051_cebwFUxAa7paIjyViyxpZVeH76WiBEln-IloXGB-a3gI0T50_zGtIp8z1A=w1112-h1672-s-no?authuser=0" loading="lazy">
         </div>
       </div>
+
+    <div id="lightbox" class="hidden">
+      <span id="close"></span>
+      <img id="lightbox-img" src="" data-caption="">
+      <span id="prev" class="arrow"></span>
+      <span id="next" class="arrow"></span>
+      <div id="caption"></div> <!-- This will show the caption -->
+    </div>
+
+
       <p style="margin-bottom:7pt;"></p>
     </div>
 
@@ -213,32 +229,32 @@
 
       <div class="cols3">
         <div class="a1_1">
-          <img class="clicker" alt="岡町、大阪"
-            src="https://lh3.googleusercontent.com/pw/AP1GczPWNCkDRnw1GgCcgzWXdrD-8fHcBWnTsSh7d0Tx62xDX1s8LvS85HXzPS9pdYWVXqqBqT2GbPgA6yBtcdwn673j9y2_n1R1QyamH__kUAvF8vILJ0_4llT19FkbNJgNfzygY3msX_cUCWKDePwmdCcUmA=w1114-h1672-s-no?authuser=1", loading="lazy">
+          <img class="clicker" data-caption="岡町、大阪"
+            src="https://lh3.googleusercontent.com/pw/AP1GczPWNCkDRnw1GgCcgzWXdrD-8fHcBWnTsSh7d0Tx62xDX1s8LvS85HXzPS9pdYWVXqqBqT2GbPgA6yBtcdwn673j9y2_n1R1QyamH__kUAvF8vILJ0_4llT19FkbNJgNfzygY3msX_cUCWKDePwmdCcUmA=w1114-h1672-s-no?authuser=1" loading="lazy">
         </div>
         <div class="a1_2">
-          <img class="clicker" alt="IPMU、東京"
-            src="https://lh3.googleusercontent.com/pw/AP1GczMUT11hczsXboVKOPkkIg0dxpuvzr-Ml-C1oJAr2sMW0bAGfUlFJOwXTUWmJl6XTHZ-TknTBtiRsWE0BKmMlAusPuAPUDLfwc_X2cjON8Rng9KEyuiS4rR9Hf9ke6ZxK-Sn7bz6Y_C33SHqFfQBhsswng=w1122-h1672-s-no?authuser=1", loading="lazy">
+          <img class="clicker" data-caption="IPMU、東京"
+            src="https://lh3.googleusercontent.com/pw/AP1GczMUT11hczsXboVKOPkkIg0dxpuvzr-Ml-C1oJAr2sMW0bAGfUlFJOwXTUWmJl6XTHZ-TknTBtiRsWE0BKmMlAusPuAPUDLfwc_X2cjON8Rng9KEyuiS4rR9Hf9ke6ZxK-Sn7bz6Y_C33SHqFfQBhsswng=w1122-h1672-s-no?authuser=1" loading="lazy">
         </div>
         <div class="a1_3">
-          <img class="clicker" alt="大阪"
-            src="https://lh3.googleusercontent.com/pw/AP1GczPn02KpFNI8x3sTIvWWOO1iajLqyItIFMGtZJGDylXeSVb3rdwpHw09YNAfzolknbrW66yP3rp7wPWxWOxGyhOWpm8qM90Iddu995HbYusc-Xo6i_fGiyWKg_yGazHkKmgBaLJe2h726O4ELSUIpn2ylg=w1112-h1672-s-no?authuser=0", loading="lazy">
+          <img class="clicker" data-caption="大阪"
+            src="https://lh3.googleusercontent.com/pw/AP1GczPn02KpFNI8x3sTIvWWOO1iajLqyItIFMGtZJGDylXeSVb3rdwpHw09YNAfzolknbrW66yP3rp7wPWxWOxGyhOWpm8qM90Iddu995HbYusc-Xo6i_fGiyWKg_yGazHkKmgBaLJe2h726O4ELSUIpn2ylg=w1112-h1672-s-no?authuser=0" loading="lazy">
         </div>
         <div class="a2_1">
-          <img class="clicker" alt="伊勢市、三重県 (Ise, Mie Prefecture). Ilford Delta 400"
-            src="https://lh3.googleusercontent.com/pw/AP1GczPn02KpFNI8x3sTIvWWOO1iajLqyItIFMGtZJGDylXeSVb3rdwpHw09YNAfzolknbrW66yP3rp7wPWxWOxGyhOWpm8qM90Iddu995HbYusc-Xo6i_fGiyWKg_yGazHkKmgBaLJe2h726O4ELSUIpn2ylg=w1112-h1672-s-no?authuser=0", loading="lazy">
+          <img class="clicker" data-caption="伊勢市、三重県 (Ise, Mie Prefecture). Ilford Delta 400"
+            src="https://lh3.googleusercontent.com/pw/AP1GczPn02KpFNI8x3sTIvWWOO1iajLqyItIFMGtZJGDylXeSVb3rdwpHw09YNAfzolknbrW66yP3rp7wPWxWOxGyhOWpm8qM90Iddu995HbYusc-Xo6i_fGiyWKg_yGazHkKmgBaLJe2h726O4ELSUIpn2ylg=w1112-h1672-s-no?authuser=0" loading="lazy">
         </div>
         <div class="a2_2">
-          <img class="clicker" alt="東海村、茨城県"
-            src="https://lh3.googleusercontent.com/pw/AP1GczPfvvgXbTe8B2unq_MmAOdSbE4V6iLzq2ZAlSDLnVFXfImkjQdE1FqilG_3kLouzpuvzt00yV80wcSEai3XXjL_lWtPGelmjDhwgqxSF8MozER491Pq3dwWIOcfQShQDkyZMHSR7lpSzXvODPwZV18JUA=w1112-h1672-s-no?authuser=1", loading="lazy">
+          <img class="clicker" data-caption="東海村、茨城県"
+            src="https://lh3.googleusercontent.com/pw/AP1GczPfvvgXbTe8B2unq_MmAOdSbE4V6iLzq2ZAlSDLnVFXfImkjQdE1FqilG_3kLouzpuvzt00yV80wcSEai3XXjL_lWtPGelmjDhwgqxSF8MozER491Pq3dwWIOcfQShQDkyZMHSR7lpSzXvODPwZV18JUA=w1112-h1672-s-no?authuser=1" loading="lazy">
         </div>
         <div class="a2_3">
-          <img class="clicker" alt="大阪"
-            src="https://lh3.googleusercontent.com/pw/AP1GczOKfDCNiOCei3uVkKaI0aK2mMfFOJTcy6djV_n0QnJJdO-V_pOOblt4MWnWu5I0aMwbM4c0xK7-NVmdvxEU6200UK1NIyfXuFMAuRHVsukKKVyGqZCLuMkfbn1K0CUKjJ4e8Sle4Ah6xf3J0JLrTdzsLQ=w1118-h1672-s-no?authuser=1", loading="lazy">
+          <img class="clicker" data-caption="大阪"
+            src="https://lh3.googleusercontent.com/pw/AP1GczOKfDCNiOCei3uVkKaI0aK2mMfFOJTcy6djV_n0QnJJdO-V_pOOblt4MWnWu5I0aMwbM4c0xK7-NVmdvxEU6200UK1NIyfXuFMAuRHVsukKKVyGqZCLuMkfbn1K0CUKjJ4e8Sle4Ah6xf3J0JLrTdzsLQ=w1118-h1672-s-no?authuser=1" loading="lazy">
         </div>
         <div class="a3_12">
-          <img class="clicker" alt="東海村、茨城県"
-            src="https://lh3.googleusercontent.com/pw/AP1GczNbnQkNNjfm_xJJhMl5nxKkfVdEqVzQD2-HeH6mnXTHJcQjEUyhpw4AH54AlZXz96Z3ISpJ2-POnA_Wo1Z4ZfFNtxP7Si_Mi5QxyBEqjcTDNMwe6RoMGqDkCPO3-dZLbwb0p5ipji9dnGx11lQxJDPAgg=w2512-h1672-s-no?authuser=1", loading="lazy">
+          <img class="clicker" data-caption="東海村、茨城県"
+            src="https://lh3.googleusercontent.com/pw/AP1GczNbnQkNNjfm_xJJhMl5nxKkfVdEqVzQD2-HeH6mnXTHJcQjEUyhpw4AH54AlZXz96Z3ISpJ2-POnA_Wo1Z4ZfFNtxP7Si_Mi5QxyBEqjcTDNMwe6RoMGqDkCPO3-dZLbwb0p5ipji9dnGx11lQxJDPAgg=w2512-h1672-s-no?authuser=1" loading="lazy">
         </div>
       </div>
 
@@ -246,8 +262,9 @@
   </div>
 
 
+  
+  <script src="js/main.js"></script>
   <script src="pages/photos/js/main.js"></script>
-
 </body>
 
 

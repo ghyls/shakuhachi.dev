@@ -1,37 +1,61 @@
 
 
-var modal = document.getElementById('myModal');
 
-//var img = document.getElementById("myImg");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-//img.onclick = function(){
-//  modal.style.display = "block";
-//  modalImg.src = this.src;
-//  captionText.innerHTML = this.alt;
-//}
+images = document.querySelectorAll('.clicker');
 
 
-const matches = document.querySelectorAll(".clicker");
+function setupLightbox(images) {
 
-matches.forEach(match => {
-  match.addEventListener("click", function () {
-    console.log("Clicked!");
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-  })
-})
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const caption = document.getElementById('caption');
+  const close = document.getElementById('close');
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+
+  let currentIndex = 0;
+
+  images.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      lightbox.classList.remove('hidden');
+      lightboxImg.src = img.src;
+      caption.textContent = img.getAttribute('data-caption');
+      currentIndex = index;
+    });
+  });
+
+  close.addEventListener('click', () => {
+    lightbox.classList.add('hidden');
+  });
+
+  lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) {
+      lightbox.classList.add('hidden');
+    }
+  });
+
+  const showImage = (index) => {
+    currentIndex = (index + images.length) % images.length;
+    lightboxImg.src = images[currentIndex].src;
+    caption.textContent = images[currentIndex].getAttribute('data-caption');
+  };
+
+  prev.addEventListener('click', () => showImage(currentIndex - 1));
+  next.addEventListener('click', () => showImage(currentIndex + 1));
+  
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('hidden')) {
+      if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+      if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+      if (e.key === 'Escape') lightbox.classList.add('hidden');
+    }
+  });
+}
+
+console.log(images);
+setupLightbox(images);
 
 
-modal.addEventListener('click', function(e){   
-  if (modalImg.contains(e.target)){
 
-  } else{
-    console.log("Clicked outside!");
-    modal.style.display = "none"
-  }
-});
 

@@ -8,11 +8,11 @@
   <link rel="stylesheet" href="css/mine.css">
   <link rel="stylesheet" href="css/font-awesome.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-  <script src="js/vendor/jquery-1.10.2.min.js"></script>
-  <script src="js/main.js"></script>
   <link rel="stylesheet" href="css/templatemo-style.css">
   <link rel="stylesheet" type="text/css" href="pages/gal/css/style.css">
+
+  <script src="js/vendor/jquery-1.10.2.min.js"></script>
+
 
 </head>
 <!-- Google tag (gtag.js) -->
@@ -53,10 +53,13 @@
 
   <div class="container" id="page-content">
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-      <img class="modal-content" id="img01">
-      <div id="caption"></div>
+
+    <div id="lightbox" class="hidden">
+      <span id="close"></span>
+      <img id="lightbox-img" src="" data-caption="">
+      <span id="prev" class="arrow"></span>
+      <span id="next" class="arrow"></span>
+      <div id="caption"></div> <!-- This will show the caption -->
     </div>
 
     <br><br>
@@ -65,17 +68,17 @@
     </div>
     <div class="row">
       <div class="column">
-        <img class="clicker" alt="The crack" src="https://lh3.googleusercontent.com/pw/AP1GczOjq2uPyLqUJ2s1ecaOpa9c-ZI6K3Bb-xHBa_oaN5Ij7ZyzdOlOJFPhQO_gDu_xakilpwi7XVe2BWp27_xzzwsQb7t0bqN7NC9NScMxpWWb3OXJPzHTBsG1ksv65zKg7JTL5VKN1lmc2CM_pYnAdNv0Dw=w1254-h1672-s-no?authuser=1", loading="lazy">
-        <img class="clicker" alt="" src="https://lh3.googleusercontent.com/pw/AP1GczNCY3i5J9PDE9s-VQUMaWOIDNQ-wX-Ei3L41-rgrclljT2ZNOa-jTWJErXNSOifHF9SlznJ1Hy1X0UKjZGtNQPTjQU46Bd-qX0NipdCO0MlQp8mpzYx-3ZIR1z6s48Fp80WA5dIF4IQ1wtQMSCxGrBAwA=w2230-h1672-s-no?authuser=1", loading="lazy">
-        <img class="clicker" alt="" src="https://lh3.googleusercontent.com/pw/AP1GczM2MoKlVw5QgZzG3Ft3uCs2EW7Lsgr5rC8sI-bRG16oWZCqWWUtcOdv4a17fVwZF4vXoHuAbrj7nHKl-UrYrNgx3E7fN4Lo18e9bclUHFhXHIWfmYZBfn92bNCTfbJp8yb-XAU1S1HNHDz7xfQtgPaZcg=w2230-h1672-s-no?authuser=1", loading="lazy">
+        <img class="clicker" data-caption="The (small) crack" src="https://lh3.googleusercontent.com/pw/AP1GczOjq2uPyLqUJ2s1ecaOpa9c-ZI6K3Bb-xHBa_oaN5Ij7ZyzdOlOJFPhQO_gDu_xakilpwi7XVe2BWp27_xzzwsQb7t0bqN7NC9NScMxpWWb3OXJPzHTBsG1ksv65zKg7JTL5VKN1lmc2CM_pYnAdNv0Dw=w1254-h1672-s-no?authuser=1" loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AP1GczNCY3i5J9PDE9s-VQUMaWOIDNQ-wX-Ei3L41-rgrclljT2ZNOa-jTWJErXNSOifHF9SlznJ1Hy1X0UKjZGtNQPTjQU46Bd-qX0NipdCO0MlQp8mpzYx-3ZIR1z6s48Fp80WA5dIF4IQ1wtQMSCxGrBAwA=w2230-h1672-s-no?authuser=1" loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AP1GczM2MoKlVw5QgZzG3Ft3uCs2EW7Lsgr5rC8sI-bRG16oWZCqWWUtcOdv4a17fVwZF4vXoHuAbrj7nHKl-UrYrNgx3E7fN4Lo18e9bclUHFhXHIWfmYZBfn92bNCTfbJp8yb-XAU1S1HNHDz7xfQtgPaZcg=w2230-h1672-s-no?authuser=1" loading="lazy">
       </div>
       <div class="column">
-        <img class="clicker" alt="" src="https://lh3.googleusercontent.com/pw/AP1GczNtjp0Ycrh-4gcaNy4DbKqBbZslpSCWaQ6r1rFEwpCxXGXD6V1yU_L_pcn3dK_csHloDTRHXUfO7ntbiJz_gq2Jj8Ig9YedAMf-2Eb7YEofDUwx5qamQGPkjrUUpjnhEVYoPUg4vgDgcdrTknC6A13Kjw=w2230-h1672-s-no?authuser=1", loading="lazy">
-        <img class="clicker" alt="" src="https://lh3.googleusercontent.com/pw/AP1GczPUCenjjkC8JOEdcrWqxYJ4LoA7X7qjfr-9XqDaSOKUyoFV99kEdcZvAtiKm4fEn_WnHJ_aXGh3tv-S_1boN0zN365YZpmTIOdvW9zHnmDHaC5bVBC3EVCEGzHuTSOL7HCpQqQ7CUgDezwuBR-AKFqCjQ=w2230-h1672-s-no?authuser=1", loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AP1GczNtjp0Ycrh-4gcaNy4DbKqBbZslpSCWaQ6r1rFEwpCxXGXD6V1yU_L_pcn3dK_csHloDTRHXUfO7ntbiJz_gq2Jj8Ig9YedAMf-2Eb7YEofDUwx5qamQGPkjrUUpjnhEVYoPUg4vgDgcdrTknC6A13Kjw=w2230-h1672-s-no?authuser=1" loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AP1GczPUCenjjkC8JOEdcrWqxYJ4LoA7X7qjfr-9XqDaSOKUyoFV99kEdcZvAtiKm4fEn_WnHJ_aXGh3tv-S_1boN0zN365YZpmTIOdvW9zHnmDHaC5bVBC3EVCEGzHuTSOL7HCpQqQ7CUgDezwuBR-AKFqCjQ=w2230-h1672-s-no?authuser=1" loading="lazy">
       </div>
       <div class="column">
-        <img class="clicker" alt="" src="https://lh3.googleusercontent.com/pw/AP1GczMPGyFFXzcHuMPgqfTK0y5fqpUQ6Zq_GvCL41i0XRcq-CKTu7DS20Bf_a75IwS6cIJtx-6_W8VGqxYwJ5Sj2x5UTpLUgAYzPBfi2_214CtcjGT1hpRcP-9TJi2oq4OKD4P6BDEVg_nBuN4kzuZvPR8zJA=w2230-h1672-s-no?authuser=1", loading="lazy">
-        <img class="clicker" alt="" src="https://lh3.googleusercontent.com/pw/AP1GczNkFPyMXbALlcTirvBdfabEek9rb0ur-TrqkmyUjJMBi3-Cyfu_PyR2ldMtKl6HrAAGXA_fn_9pPaUTGi9HeIcHNnCvAjnfqJ11IEtmMkxnqgWHMVJ85DmA3Uwv7nK5Sd-nxLpW9RTTh5jfWSjJKjB3VA=w2230-h1672-s-no?authuser=1", loading="lazy">
+        <img class="clicker" data-caption="Tape on bamboo before applying 生漆 (namaurushi) on the 籐巻 (toumaki)" src="https://lh3.googleusercontent.com/pw/AP1GczMPGyFFXzcHuMPgqfTK0y5fqpUQ6Zq_GvCL41i0XRcq-CKTu7DS20Bf_a75IwS6cIJtx-6_W8VGqxYwJ5Sj2x5UTpLUgAYzPBfi2_214CtcjGT1hpRcP-9TJi2oq4OKD4P6BDEVg_nBuN4kzuZvPR8zJA=w2230-h1672-s-no?authuser=1" loading="lazy">
+        <img class="clicker" data-caption="籐巻 darkened and protected after a layer of urushi" src="https://lh3.googleusercontent.com/pw/AP1GczNkFPyMXbALlcTirvBdfabEek9rb0ur-TrqkmyUjJMBi3-Cyfu_PyR2ldMtKl6HrAAGXA_fn_9pPaUTGi9HeIcHNnCvAjnfqJ11IEtmMkxnqgWHMVJ85DmA3Uwv7nK5Sd-nxLpW9RTTh5jfWSjJKjB3VA=w2230-h1672-s-no?authuser=1" loading="lazy">
       </div>
     </div>
 
@@ -86,16 +89,16 @@
     </div>
     <div class="row">
       <div class="column">
-        <img class="clicker" alt="" src="https://lh3.googleusercontent.com/pw/AP1GczMeHC7ILqaEk8IZP0fWweVPMI5-yW5FzcVu9-VYujFoqyjKCWGJ0X-zQ_e3v6BTUtaE5hAQnVrprqvLTojvCxI0AAizZ68MGff0bp8enszdAPcz0l2qVcs2CRGUV701lPRg8Q-bwjlHOldyGit677VsSQ=w2230-h1672-s-no?authuser=1", loading="lazy">
-        <img class="clicker" alt="" src="https://lh3.googleusercontent.com/pw/AP1GczO5JomwjEUWL8tjx6kX7iT8bx_sxO32xh-jxMGX5OiW6qAClfRU64mG1HZpoTG_lrohJsgKsIlQ6oa4fXQOISqongcN8pyjZGIZVA6eH0TNgTlxQ1C_fMyiln3UCcNYFtgZ1cBKKdR47u3uOeCB9v9tgw=w2230-h1672-s-no?authuser=1", loading="lazy">
+        <img class="clicker" data-caption="Using paper as a guide for the saw" src="https://lh3.googleusercontent.com/pw/AP1GczMeHC7ILqaEk8IZP0fWweVPMI5-yW5FzcVu9-VYujFoqyjKCWGJ0X-zQ_e3v6BTUtaE5hAQnVrprqvLTojvCxI0AAizZ68MGff0bp8enszdAPcz0l2qVcs2CRGUV701lPRg8Q-bwjlHOldyGit677VsSQ=w2230-h1672-s-no?authuser=1" loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AP1GczO5JomwjEUWL8tjx6kX7iT8bx_sxO32xh-jxMGX5OiW6qAClfRU64mG1HZpoTG_lrohJsgKsIlQ6oa4fXQOISqongcN8pyjZGIZVA6eH0TNgTlxQ1C_fMyiln3UCcNYFtgZ1cBKKdR47u3uOeCB9v9tgw=w2230-h1672-s-no?authuser=1" loading="lazy">
       </div>
       <div class="column">
-        <img class="clicker" alt="" src="https://lh3.googleusercontent.com/pw/AP1GczNK3ZQgsntcGsX5wH6Cv-LCpE_cfqYQL1cB07P5U1t5o5eNFW991zxk0zVBaNVP-uX1Co6q3X5UeVTYQsLlrmFHnHeNqMb-onesE_mueStPZ27-PY-SEouWLANUuU4eaCzaiuacNj3tJZ5KXdmUTsgy0w=w2230-h1672-s-no?authuser=1" , loading="lazy">
-        <img class="clicker" alt="" src="https://lh3.googleusercontent.com/pw/AP1GczPbtMMoUbgUG_8lsX5eYLpg5DJ4wsBmnBCI0vUwY5HH21wXSH7PRA3at2_ikHj6tjuhMR24ltUWGU4tYX_ZJDMT_11ThhwX5aYY_iOrJWDM0t-nv6jhlLwXg8BNVsu77jHurGT4fM8qrA4ayxXR4ZjMCA=w2230-h1672-s-no?authuser=1" , loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AP1GczNK3ZQgsntcGsX5wH6Cv-LCpE_cfqYQL1cB07P5U1t5o5eNFW991zxk0zVBaNVP-uX1Co6q3X5UeVTYQsLlrmFHnHeNqMb-onesE_mueStPZ27-PY-SEouWLANUuU4eaCzaiuacNj3tJZ5KXdmUTsgy0w=w2230-h1672-s-no?authuser=1"  loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AP1GczPbtMMoUbgUG_8lsX5eYLpg5DJ4wsBmnBCI0vUwY5HH21wXSH7PRA3at2_ikHj6tjuhMR24ltUWGU4tYX_ZJDMT_11ThhwX5aYY_iOrJWDM0t-nv6jhlLwXg8BNVsu77jHurGT4fM8qrA4ayxXR4ZjMCA=w2230-h1672-s-no?authuser=1"  loading="lazy">
       </div>
       <div class="column">
-        <img class="clicker" alt="" src="https://lh3.googleusercontent.com/pw/AP1GczPsV7lt2J-tt-uXyKERT-3t66RpOlpx6yUvUUrL8-QsSDorXCHVyyWqrHZFzFtbpIAAbDVRmjCxM86qsIiL2c19P7IqHf_RoifstU2xFqfJ93PBX3P_lCD0k3uuueBl5frYXRMoZBuMnxExzR6vC8sA_A=w2230-h1672-s-no?authuser=1", loading="lazy">
-        <img class="clicker" alt="" src="https://lh3.googleusercontent.com/pw/AP1GczOCs95r9MUA6Xxc3Wuho1hHboWv-i6heP818ok6eFD8k8bHpxaLWB-qm8QcnMklJJstRgu8u8uX4rdIt1hwUb4NLsXVPxEBoYNCOLEyJUDLWGjJ-EZVFKX0AuXtU5vmIbGll8nbvJcSKYQ81u8xQnFlkA=w2230-h1672-s-no?authuser=1" , loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AP1GczPsV7lt2J-tt-uXyKERT-3t66RpOlpx6yUvUUrL8-QsSDorXCHVyyWqrHZFzFtbpIAAbDVRmjCxM86qsIiL2c19P7IqHf_RoifstU2xFqfJ93PBX3P_lCD0k3uuueBl5frYXRMoZBuMnxExzR6vC8sA_A=w2230-h1672-s-no?authuser=1" loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AP1GczOCs95r9MUA6Xxc3Wuho1hHboWv-i6heP818ok6eFD8k8bHpxaLWB-qm8QcnMklJJstRgu8u8uX4rdIt1hwUb4NLsXVPxEBoYNCOLEyJUDLWGjJ-EZVFKX0AuXtU5vmIbGll8nbvJcSKYQ81u8xQnFlkA=w2230-h1672-s-no?authuser=1"  loading="lazy">
       </div>
     </div>
 
@@ -109,14 +112,14 @@
     </div>
     <div class="row">
       <div class="column">
-        <img class="clicker" alt="" src="https://lh3.googleusercontent.com/pw/AP1GczPNQ6vz0Is-h5H9_PGlZMao2YbTCxjDh6a_ClF-OZVYs7-Fakpgu5pg93iHwgiIJrwlvWdqMdk8cx7_njUg52UZl3aohkVLPUOMhuVCPe7e9OJ6JXyqEqSc2TbLEjS7HMe-h390dsrs2YyJ1MefPdL4jw=w2230-h1672-s-no?authuser=1", loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AP1GczPNQ6vz0Is-h5H9_PGlZMao2YbTCxjDh6a_ClF-OZVYs7-Fakpgu5pg93iHwgiIJrwlvWdqMdk8cx7_njUg52UZl3aohkVLPUOMhuVCPe7e9OJ6JXyqEqSc2TbLEjS7HMe-h390dsrs2YyJ1MefPdL4jw=w2230-h1672-s-no?authuser=1" loading="lazy">
       </div>
       <div class="column">
-        <img class="clicker" alt="" src="https://lh3.googleusercontent.com/pw/AP1GczMoP9DQ4CKzEHOzxtCcAa9UzksDaFxA9oiMLA1s_SOKwQh1yMzMV0gZeci0GTjt1k40ExdsIT83ws0nS4COrUvUz10gvkbF0ril2Q6U5HDyuOz_tnvl8Vdgbs9LNik_5-aDouE4kX-_CZFUrlM3fywStg=w2230-h1672-s-no?authuser=1", loading="lazy">
-        <img class="clicker" alt="" src="https://lh3.googleusercontent.com/pw/AP1GczPU2USWKOy0uRaENMulCPz0OjEHMpNxj-LGZxONN_4FDqwjN6WAwe50J3XG-kgrRcHE75GDpQbmJ2VX7vsxAv2ueModzuyW5to3H0BF_bcDnzg-f3i9YJ11pKy8BzfS_8M4TSBkOz70rw1sKSKSzlL59A=w2230-h1672-s-no?authuser=1", loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AP1GczMoP9DQ4CKzEHOzxtCcAa9UzksDaFxA9oiMLA1s_SOKwQh1yMzMV0gZeci0GTjt1k40ExdsIT83ws0nS4COrUvUz10gvkbF0ril2Q6U5HDyuOz_tnvl8Vdgbs9LNik_5-aDouE4kX-_CZFUrlM3fywStg=w2230-h1672-s-no?authuser=1" loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AP1GczPU2USWKOy0uRaENMulCPz0OjEHMpNxj-LGZxONN_4FDqwjN6WAwe50J3XG-kgrRcHE75GDpQbmJ2VX7vsxAv2ueModzuyW5to3H0BF_bcDnzg-f3i9YJ11pKy8BzfS_8M4TSBkOz70rw1sKSKSzlL59A=w2230-h1672-s-no?authuser=1" loading="lazy">
       </div>
       <div class="column">
-        <img class="clicker" alt="" src="https://lh3.googleusercontent.com/pw/AP1GczMg2kVUJYPPeQOnmuZLRBo2odkSH43oxrMXvQ86fMf4ywBD6yFo2THB1xEbmgxc-UwauqZhwhqQLTq-FHMiNHdqpiNrhQpz0dG1mIDHB44bwg2EOmMzPjjmfZFyfIolAtnAr3PA9RfZhCfzk9J8xtMNJQ=w2230-h1672-s-no?authuser=1" , loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AP1GczMg2kVUJYPPeQOnmuZLRBo2odkSH43oxrMXvQ86fMf4ywBD6yFo2THB1xEbmgxc-UwauqZhwhqQLTq-FHMiNHdqpiNrhQpz0dG1mIDHB44bwg2EOmMzPjjmfZFyfIolAtnAr3PA9RfZhCfzk9J8xtMNJQ=w2230-h1672-s-no?authuser=1"  loading="lazy">
       </div>
     </div>
 
@@ -131,17 +134,17 @@
     <div class="row">
       <div class="column">
         <div class="column-title"> 前 </div>
-        <img class="clicker" alt="前" src="https://lh3.googleusercontent.com/pw/ADCreHfIaa9eU0fyAXaT3E1bMNFpT8dRDSG-ppS-GkrfB-kHAGvTJIsLA3gk-pQwdCfHKnzdPqlQQ8zme-F20Je-Y7vxFEusXdWy7ijZKwM3veYNg_vVBFZip-ucNygpRRTZPAX8Dmq7AFjGDbDQUoTvMjF-9g=w2224-h1668-s-no", loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/ADCreHfIaa9eU0fyAXaT3E1bMNFpT8dRDSG-ppS-GkrfB-kHAGvTJIsLA3gk-pQwdCfHKnzdPqlQQ8zme-F20Je-Y7vxFEusXdWy7ijZKwM3veYNg_vVBFZip-ucNygpRRTZPAX8Dmq7AFjGDbDQUoTvMjF-9g=w2224-h1668-s-no" loading="lazy">
       </div>
       <div class="column">
         <div class="column-title"> 中 </div>
-        <img class="clicker" alt="中 2" src="https://lh3.googleusercontent.com/pw/ADCreHchd_SUMEwhrh27nT59R3jnYCRNnjF10bgvUKkpT_KToOH1-mZ9qL3CKg319NBTPAasNMx3Y-65tMjY3tTq229KW4oKgYtCL9GZUmx_CeGnsI3fPj2Ar3gbMReLNHsiX_XkgNvHxUYfBDy1EikYaRseyQ=w1252-h1668-s-no?authuser=1", loading="lazy">
-        <img class="clicker" alt="中 1" src="https://lh3.googleusercontent.com/pw/ADCreHfTC-E3cvlq6dUiI8zXZzWmrxWOPr73IMKFcS4obTCJdoH3QI76cnoN6YlHDlXlZinbY0sJvvaVVjsAQKxnmvO5b4J_xvfiZhOkSF7Nl2uNsE-DjlL0afWrqFRM8n11xj9jhBLjuDJXXpWnUoEQXiZ2GQ=w2224-h1668-s-no?authuser=1" , loading="lazy">
+        <img class="clicker" data-caption="The 'powder' is collected from rasping and sawing similarly toned bamboos" src="https://lh3.googleusercontent.com/pw/ADCreHchd_SUMEwhrh27nT59R3jnYCRNnjF10bgvUKkpT_KToOH1-mZ9qL3CKg319NBTPAasNMx3Y-65tMjY3tTq229KW4oKgYtCL9GZUmx_CeGnsI3fPj2Ar3gbMReLNHsiX_XkgNvHxUYfBDy1EikYaRseyQ=w1252-h1668-s-no?authuser=1" loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/ADCreHfTC-E3cvlq6dUiI8zXZzWmrxWOPr73IMKFcS4obTCJdoH3QI76cnoN6YlHDlXlZinbY0sJvvaVVjsAQKxnmvO5b4J_xvfiZhOkSF7Nl2uNsE-DjlL0afWrqFRM8n11xj9jhBLjuDJXXpWnUoEQXiZ2GQ=w2224-h1668-s-no?authuser=1"  loading="lazy">
       </div>
       <div class="column">
         <div class="column-title"> 後 </div>
         <img
-        class="clicker" alt="後" src="https://lh3.googleusercontent.com/pw/ADCreHcm8dtIk8XOXnzyZzSkuFKumhRXLNXnRB5RxZwihHIoczuuQrrKkcoBugauZKOIj8P2O3BWAMAyqYig9fBqKR_bDiisFr4x3KUOifEmuBKgamH84GbxfxTyQdYkWrfCWtfBegTbsrjOnwIR2VLEEUuUlQ=w2224-h1668-s-no?authuser=1">
+        class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/ADCreHcm8dtIk8XOXnzyZzSkuFKumhRXLNXnRB5RxZwihHIoczuuQrrKkcoBugauZKOIj8P2O3BWAMAyqYig9fBqKR_bDiisFr4x3KUOifEmuBKgamH84GbxfxTyQdYkWrfCWtfBegTbsrjOnwIR2VLEEUuUlQ=w2224-h1668-s-no?authuser=1">
       </div>
     </div>
 
@@ -154,20 +157,20 @@
     <div class="row">
       <div class="column">
         <div class="column-title"> 前 </div>
-        <img class="clicker" alt="前" src="https://lh3.googleusercontent.com/pw/AIL4fc8qVm159PQDshCZm8oXo2ZVNZFE5paX1wdpCuM_Ad6oyiUFsXzIbRTlFjcQXGVADnm-W8thw1lyMZYTy7-ceKI36EbdkBDjdh6o17oG1jVfwFOXHzHXYciaDFGDQFP1Mln6EIo0It3bJVx3yz1t0Tfcog=w2226-h1670-s-no", loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AIL4fc8qVm159PQDshCZm8oXo2ZVNZFE5paX1wdpCuM_Ad6oyiUFsXzIbRTlFjcQXGVADnm-W8thw1lyMZYTy7-ceKI36EbdkBDjdh6o17oG1jVfwFOXHzHXYciaDFGDQFP1Mln6EIo0It3bJVx3yz1t0Tfcog=w2226-h1670-s-no" loading="lazy">
       </div>
       <div class="column">
         <div class="column-title"> 中 </div>
-        <img class="clicker" alt="中 1" src="https://lh3.googleusercontent.com/pw/AIL4fc88jNN5bAaSkWsOmv2sf-HoFL2F2opWfBpbSRlBbCBsEZ4L1MTWJrwVob2t-c1pQRlpf1ZHv1b5WxfC8b7ZfWEym-2I6C6E112aOAVKOmgEi7HhJ48VuV3c9ysVRta6VxORGw3BI6B5jtOu3TFLd6I03A=w2226-h1670-s-no" , loading="lazy">
-        <img class="clicker" alt="中 2" src="https://lh3.googleusercontent.com/pw/AIL4fc-VH50CrSfVHPzOsOTtqyFmZ4NpyZMggVVupqwrVcpJiG1HyndIA6J-5InsUWErtPu4YgTcN4TdH3jKWP6J-GgjjerJkE-nrKaqJQwRCx6OKL6TE9c2DsQxAgbURhkXvAgF-tsj8ynBgKMcLVYuFjGKyQ=w2226-h1670-s-no", loading="lazy">
-        <img class="clicker" alt="中 3" src="https://lh3.googleusercontent.com/pw/AIL4fc8EWJH9bqh_TasaS5QeeWCyJWO28DM0fujAtyBR58wb71w_J6vcFXaLQVxK2uFtl_R1gBt88p7N3jcmXZXEDbpXEfP43nzR-qh49ciS3ReP8SG0_1N8XnJ267qWZ7dZWSiO3D4VOu3TrN4aFZ1z1aDwIA=w2226-h1670-s-no", loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AIL4fc88jNN5bAaSkWsOmv2sf-HoFL2F2opWfBpbSRlBbCBsEZ4L1MTWJrwVob2t-c1pQRlpf1ZHv1b5WxfC8b7ZfWEym-2I6C6E112aOAVKOmgEi7HhJ48VuV3c9ysVRta6VxORGw3BI6B5jtOu3TFLd6I03A=w2226-h1670-s-no"  loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AIL4fc-VH50CrSfVHPzOsOTtqyFmZ4NpyZMggVVupqwrVcpJiG1HyndIA6J-5InsUWErtPu4YgTcN4TdH3jKWP6J-GgjjerJkE-nrKaqJQwRCx6OKL6TE9c2DsQxAgbURhkXvAgF-tsj8ynBgKMcLVYuFjGKyQ=w2226-h1670-s-no" loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AIL4fc8EWJH9bqh_TasaS5QeeWCyJWO28DM0fujAtyBR58wb71w_J6vcFXaLQVxK2uFtl_R1gBt88p7N3jcmXZXEDbpXEfP43nzR-qh49ciS3ReP8SG0_1N8XnJ267qWZ7dZWSiO3D4VOu3TrN4aFZ1z1aDwIA=w2226-h1670-s-no" loading="lazy">
       </div>
       <div class="column">
         <div class="column-title"> 後 </div>
         <img
-        class="clicker" alt="後" src="https://lh3.googleusercontent.com/pw/AIL4fc_BAIlgc2WQwjpQX4AIfmO6qF3AfuXsJdhL7lj5m6ugAKYkJLEuyIwLkvRG732XO15Hca4OLZRB06i-Fuq1SwEtqMD41uSiC6U_wFrYFK8T20IM-DHpU_be4ohDFqF5QKhTdiajHNy4VFSMw94EqXx8dw=w2226-h1670-s-no">
+        class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AIL4fc_BAIlgc2WQwjpQX4AIfmO6qF3AfuXsJdhL7lj5m6ugAKYkJLEuyIwLkvRG732XO15Hca4OLZRB06i-Fuq1SwEtqMD41uSiC6U_wFrYFK8T20IM-DHpU_be4ohDFqF5QKhTdiajHNy4VFSMw94EqXx8dw=w2226-h1670-s-no">
         <img
-        class="clicker" alt="後" src="https://lh3.googleusercontent.com/pw/AIL4fc-1ilPAZj4KevYAkrFpffTFLiLYuZKwgSzxfGE58GZqpL2rr65J7-VrFYv_cZHZ1vMwx_TC-BORIEpUHFpO2MHitqz8ExXduC7olnD64ddVZ-iqfgxxaatVjdEvWIhUD1Qhdhs_7LEaTNkXO_WVknWADg=w1252-h1670-s-no">
+        class="clicker" data-caption="Very proud of this one!" src="https://lh3.googleusercontent.com/pw/AIL4fc-1ilPAZj4KevYAkrFpffTFLiLYuZKwgSzxfGE58GZqpL2rr65J7-VrFYv_cZHZ1vMwx_TC-BORIEpUHFpO2MHitqz8ExXduC7olnD64ddVZ-iqfgxxaatVjdEvWIhUD1Qhdhs_7LEaTNkXO_WVknWADg=w1252-h1670-s-no">
       </div>
     </div>
 
@@ -179,22 +182,22 @@
     <div class="row">
       <div class="column">
         <div class="column-title"> 前 </div>
-        <img class="clicker" alt="前" src="https://lh3.googleusercontent.com/pw/AJFCJaURZ7h8Rp_8pW1EMwck9YiUeOWy7f6zSzwZ0odF9ocZdEbUD_xB1tzfdtpbt2YMQN7lYT9OFtKd-5N18Ll1qwHeummXp1D-vXP8P2-2yAfqAJo85ioUvg_BnjUdrDu_0Zjayv9sB2mzZ-qshjhIE4s25A=w1293-h970-s-no", loading="lazy">
-        <img class="clicker" alt="前" src="https://lh3.googleusercontent.com/pw/AJFCJaXm7WNLh5h359-6hygSuNoBNDPv-GzEUlu5afdVf4cAEz_nGE0zhAOFWI8uJslhEqZ-xO2nhoUr6yXISFET6ExFgQfbh0QAW6W18-baGoWU8U5RrDwyvShiFVd0DjTlhXKRk25plDsBs8CZSJ9tXRggmQ=w1293-h970-s-no", loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AJFCJaURZ7h8Rp_8pW1EMwck9YiUeOWy7f6zSzwZ0odF9ocZdEbUD_xB1tzfdtpbt2YMQN7lYT9OFtKd-5N18Ll1qwHeummXp1D-vXP8P2-2yAfqAJo85ioUvg_BnjUdrDu_0Zjayv9sB2mzZ-qshjhIE4s25A=w1293-h970-s-no" loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AJFCJaXm7WNLh5h359-6hygSuNoBNDPv-GzEUlu5afdVf4cAEz_nGE0zhAOFWI8uJslhEqZ-xO2nhoUr6yXISFET6ExFgQfbh0QAW6W18-baGoWU8U5RrDwyvShiFVd0DjTlhXKRk25plDsBs8CZSJ9tXRggmQ=w1293-h970-s-no" loading="lazy">
       </div>
       <div class="column">
         <div class="column-title"> 中 </div>
-        <img class="clicker" alt="中 1" src="https://lh3.googleusercontent.com/pw/AJFCJaXuU_YjABAywhZmC4DGuYOhPiBOVWditIRuTuq2RaDC9_KKaXnRRziSBoaabJskr7DDqRC5psX3YUFbTFbG_ILvN-42anbGSSQ1coiLbu4coC7F6QWdwW1T4uOnMulPAZ1W7uqXCWxDBXRdSSCo32Qyww=w2224-h1668-s-no" , loading="lazy">
-        <img class="clicker" alt="中 2" src="https://lh3.googleusercontent.com/pw/AJFCJaVfLrASPV6HOU7IEgfLNUSwbYRYb-WuYCdSMV8BTw1-N0G3GCmVo_jr-YCuykn-jR57UPnFWMkOM67VGfCXQVRFKnCu_KhWYOmjybNOJyOTdMb9MG5GmWPbvHmP8k68yrhpMakYAfrjf3RemHndqb3ohQ=w2224-h1668-s-no", loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AJFCJaXuU_YjABAywhZmC4DGuYOhPiBOVWditIRuTuq2RaDC9_KKaXnRRziSBoaabJskr7DDqRC5psX3YUFbTFbG_ILvN-42anbGSSQ1coiLbu4coC7F6QWdwW1T4uOnMulPAZ1W7uqXCWxDBXRdSSCo32Qyww=w2224-h1668-s-no"  loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AJFCJaVfLrASPV6HOU7IEgfLNUSwbYRYb-WuYCdSMV8BTw1-N0G3GCmVo_jr-YCuykn-jR57UPnFWMkOM67VGfCXQVRFKnCu_KhWYOmjybNOJyOTdMb9MG5GmWPbvHmP8k68yrhpMakYAfrjf3RemHndqb3ohQ=w2224-h1668-s-no" loading="lazy">
       </div>
       <div class="column">
         <div class="column-title"> 後 </div>
         <img
-        class="clicker" alt="後" src="https://lh3.googleusercontent.com/pw/AJFCJaXYVwmpgEa82yXtTOLdagthOrQp_hQDcwhvaxf81ydrnxKm96nJZLpRkem3kvnHNYZLuSYxOhRkCHEnhNenr09mSJVI35hr768ZRBgREjuueTwrTiMzZysKnroDN0oQLS26dYGomTUEECZb04orX5mMog=w2224-h1668-s-no">
+        class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AJFCJaXYVwmpgEa82yXtTOLdagthOrQp_hQDcwhvaxf81ydrnxKm96nJZLpRkem3kvnHNYZLuSYxOhRkCHEnhNenr09mSJVI35hr768ZRBgREjuueTwrTiMzZysKnroDN0oQLS26dYGomTUEECZb04orX5mMog=w2224-h1668-s-no">
         <img
-        class="clicker" alt="後" src="https://lh3.googleusercontent.com/pw/AJFCJaXwsAS2AEFjXH6algXyPkn5UhBhsn9-3V-BszM6--UZlJi4ncIV2dTMo8TTH4ZzfKmwcLWq1kRdOYZJ30txm3FipzguKKPirX2pVT_Gppfn_i_qMPBbhnA7GsnWUowbRX9wAaTrdZVFJkWuwcIXWOjFnA=w2224-h1668-s-no">
+        class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AJFCJaXwsAS2AEFjXH6algXyPkn5UhBhsn9-3V-BszM6--UZlJi4ncIV2dTMo8TTH4ZzfKmwcLWq1kRdOYZJ30txm3FipzguKKPirX2pVT_Gppfn_i_qMPBbhnA7GsnWUowbRX9wAaTrdZVFJkWuwcIXWOjFnA=w2224-h1668-s-no">
         <img
-        class="clicker" alt="後" src="https://lh3.googleusercontent.com/pw/AJFCJaXnsFs6Pj39qBzOjtI-G34TqKiZQtBH_WRn0HNULT09g5nmlLtO0jUrEfDIav4N0xvQkEXglnfb1p_mMM85LwT70f68psZcd84h9ayxMfd-03O7JGf-g09cFq8-A2u-oq07ep1S4LDy2Gm2UermXVUj6w=w2224-h1668-s-no">
+        class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AJFCJaXnsFs6Pj39qBzOjtI-G34TqKiZQtBH_WRn0HNULT09g5nmlLtO0jUrEfDIav4N0xvQkEXglnfb1p_mMM85LwT70f68psZcd84h9ayxMfd-03O7JGf-g09cFq8-A2u-oq07ep1S4LDy2Gm2UermXVUj6w=w2224-h1668-s-no">
       </div>
     </div>
 
@@ -205,20 +208,20 @@
     <div class="row">
       <div class="column">
         <div class="column-title"> 前 </div>
-        <img class="clicker" alt="前" src="https://lh3.googleusercontent.com/pw/AJFCJaVWPLN2InBsaYjnxrivAI4ptWU5ECaptM-Njdny0l-WXf0MW_44e8qmgzPdL8IOuQJUa8do_NlbY3O97blnrNK_ZZ55m4jxaL_S-gqbcAqnsLgokbfeFOvQsbqXmeUCd3nx9AtJO0a7MrHqXrsJXmCQpA=w1252-h1670-s-no", loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AJFCJaVWPLN2InBsaYjnxrivAI4ptWU5ECaptM-Njdny0l-WXf0MW_44e8qmgzPdL8IOuQJUa8do_NlbY3O97blnrNK_ZZ55m4jxaL_S-gqbcAqnsLgokbfeFOvQsbqXmeUCd3nx9AtJO0a7MrHqXrsJXmCQpA=w1252-h1670-s-no" loading="lazy">
       </div>
       <div class="column">
         <div class="column-title"> 中 </div>
-        <img class="clicker" alt="中 1" src="https://lh3.googleusercontent.com/pw/AJFCJaVVN8SFIPPl-hslt7W5biwr9zCDMfFyhmz-xS8q8LxPwc_4hRoj7tmJXtc4U-Ns-ihsYIFZQbTY_5hxiBRN1lGNnt781Z5rxHo9pKI_8hX0JfLFTIdMH6g5IfIfg3-uD1xiYFdAPntZGkxkrGgDPsv-Vw=w2226-h1670-s-no", loading="lazy">
-        <img class="clicker" alt="中 2" src="https://lh3.googleusercontent.com/pw/AJFCJaWous5ntlufreVXpr0nFzfMGi5sT16qI5I0wiQTmjg8SmbWEF3CcVgk0BDRjHUjUukzaKIuRQ5ZTqfiN9iqSXd60Egq_VDuml7uTa2sZ7RQKZpIwR85ChEMql9lT3vg4gSeNQ56TjI4QBsZtLr469JyMQ=w2226-h1670-s-no", loading="lazy">
-        <img class="clicker" alt="中 3" src="https://lh3.googleusercontent.com/pw/AJFCJaUwQx_2s158yu8ODE8LbONbxfXoTRd5A0NBQEYhDXWK-Ynbf8kMFvbXr-ez89-4UIw2HSUUdavzfP74O48dQzVEr_FVGnqOM8xrbrGPnpQz3Jf67g92EZ79Gxbdv0ls3l-7iMM7_gGF8vIK7L8cUyKyYg=w2226-h1670-s-no", loading="lazy">
-        <img class="clicker" alt="中 4" src="https://lh3.googleusercontent.com/pw/AJFCJaXN0iHfjj-mfY9JPag7zbzLuMr0pDKk3gAXrEV7_fBujFoTDcJIgCdd0ycMYKxZapIAkxn41CwHoYJAoaZ0gwIhPbr-VqsxBaeZzdEvAwNdCwKkbty6ZCF0yiMGA00ZGTLh6hKoXj3Db8lN45SeTpeiaw=w2226-h1670-s-no", loading="lazy">
-        <img class="clicker" alt="中 5" src="https://lh3.googleusercontent.com/pw/AJFCJaX30tz5VOBVTnYoqLkYVR3V-WJT23WNyQ5WZl2speaK4yTImOohSi1iO4yX2qHEfiKIRet1Fcdysw4JQYtw5NVWHHzKnMVA4dGGu33QTH1qVgXBTcoZfFnQkf5x9CvNKJKvv0g8PmWfMLe6fabOsNLceg=w2226-h1670-s-no", loading="lazy">
-        <img class="clicker" alt="中 6" src="https://lh3.googleusercontent.com/pw/AJFCJaXPfAUvRsL8-P14UrnGID2E5CqPpUyyMaMM_yq9_z0D4Jsm_C5IXzL4ECm8aOsXJCNHnTiDxrCGwH85Fs7QYrykU_jHzab-fMv-_GPJPZ5ZiwlK1P1ubdPOV8EtOe0pFvTWre_AZMbPhgmP3NIOHpYF1g=w2226-h1670-s-no", loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AJFCJaVVN8SFIPPl-hslt7W5biwr9zCDMfFyhmz-xS8q8LxPwc_4hRoj7tmJXtc4U-Ns-ihsYIFZQbTY_5hxiBRN1lGNnt781Z5rxHo9pKI_8hX0JfLFTIdMH6g5IfIfg3-uD1xiYFdAPntZGkxkrGgDPsv-Vw=w2226-h1670-s-no" loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AJFCJaWous5ntlufreVXpr0nFzfMGi5sT16qI5I0wiQTmjg8SmbWEF3CcVgk0BDRjHUjUukzaKIuRQ5ZTqfiN9iqSXd60Egq_VDuml7uTa2sZ7RQKZpIwR85ChEMql9lT3vg4gSeNQ56TjI4QBsZtLr469JyMQ=w2226-h1670-s-no" loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AJFCJaUwQx_2s158yu8ODE8LbONbxfXoTRd5A0NBQEYhDXWK-Ynbf8kMFvbXr-ez89-4UIw2HSUUdavzfP74O48dQzVEr_FVGnqOM8xrbrGPnpQz3Jf67g92EZ79Gxbdv0ls3l-7iMM7_gGF8vIK7L8cUyKyYg=w2226-h1670-s-no" loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AJFCJaXN0iHfjj-mfY9JPag7zbzLuMr0pDKk3gAXrEV7_fBujFoTDcJIgCdd0ycMYKxZapIAkxn41CwHoYJAoaZ0gwIhPbr-VqsxBaeZzdEvAwNdCwKkbty6ZCF0yiMGA00ZGTLh6hKoXj3Db8lN45SeTpeiaw=w2226-h1670-s-no" loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AJFCJaX30tz5VOBVTnYoqLkYVR3V-WJT23WNyQ5WZl2speaK4yTImOohSi1iO4yX2qHEfiKIRet1Fcdysw4JQYtw5NVWHHzKnMVA4dGGu33QTH1qVgXBTcoZfFnQkf5x9CvNKJKvv0g8PmWfMLe6fabOsNLceg=w2226-h1670-s-no" loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AJFCJaXPfAUvRsL8-P14UrnGID2E5CqPpUyyMaMM_yq9_z0D4Jsm_C5IXzL4ECm8aOsXJCNHnTiDxrCGwH85Fs7QYrykU_jHzab-fMv-_GPJPZ5ZiwlK1P1ubdPOV8EtOe0pFvTWre_AZMbPhgmP3NIOHpYF1g=w2226-h1670-s-no" loading="lazy">
       </div>
       <div class="column">
         <div class="column-title"> 後 </div>
-        <img class="clicker" alt="後" src="https://lh3.googleusercontent.com/pw/AJFCJaUfXIrwCJ5Pz-xOSeKQQIL8hxLU59CqNAKzD3A7XPWPxl23q995GYRYzBxfUjPdhxlYCK_sZlmqsafejoYWNWERSDYHE54JOrA2i0MelLD235qXSurMAbgGnaZ82zi8NxWINDcuq_WI-ljewbDjgSmnmw=w2226-h1670-s-no", loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AJFCJaUfXIrwCJ5Pz-xOSeKQQIL8hxLU59CqNAKzD3A7XPWPxl23q995GYRYzBxfUjPdhxlYCK_sZlmqsafejoYWNWERSDYHE54JOrA2i0MelLD235qXSurMAbgGnaZ82zi8NxWINDcuq_WI-ljewbDjgSmnmw=w2226-h1670-s-no" loading="lazy">
       </div>
     </div>
 
@@ -230,16 +233,16 @@
     <div class="row">
       <div class="column">
         <div class="column-title"> 前 </div>
-        <img class="clicker" alt="前" src="https://lh3.googleusercontent.com/pw/AJFCJaWBslu8iMFczFhuXlRLFBUDxynwcHBKZSktmuCUzZ9Qp3hTtPkR9487ERV1jYMxQxcRGE0Wshr9bB53KNRVSy3rMrwIarwI-a5WhB2fnCU4lkwoux3P8aiitUA4gszl4hkYcoFXqxBdR_RChAwbmNdnmQ=w2226-h1670-s-no", loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AJFCJaWBslu8iMFczFhuXlRLFBUDxynwcHBKZSktmuCUzZ9Qp3hTtPkR9487ERV1jYMxQxcRGE0Wshr9bB53KNRVSy3rMrwIarwI-a5WhB2fnCU4lkwoux3P8aiitUA4gszl4hkYcoFXqxBdR_RChAwbmNdnmQ=w2226-h1670-s-no" loading="lazy">
       </div>
       <div class="column">
         <div class="column-title"> 中 </div>
-        <img class="clicker" alt="中 1" src="https://lh3.googleusercontent.com/pw/AJFCJaUm14fonGSD6ICv4dLBAIqB_M3uldrJqx51tNLegQyRNBbUGFdFuObRJfwJ7NbFAvrC7nkPssOmNGgChwyQ8UoEZczXGKCF2EcOI2KtMN0iz09jo6aTeuKCSYDGYRId0rHAnoebTyguDyna4bZLadgMRw=w2226-h1670-s-no", loading="lazy">
-        <img class="clicker" alt="中 2" src="https://lh3.googleusercontent.com/pw/AJFCJaUxYoWvjAKxio2pFyzTid_GqJjg9u8W-pWlkvVC5csZn_goKj2bQPqDDvEOqplBMnfyGEDOX4kAHDHim6bDxWlNZCWAI9zXeB74NtQ0yfQri2LqLX5cDh5-m3UEJFRUWQ858C9j4z6zRhe1o6PdEH-k5Q=w2226-h1670-s-no", loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AJFCJaUm14fonGSD6ICv4dLBAIqB_M3uldrJqx51tNLegQyRNBbUGFdFuObRJfwJ7NbFAvrC7nkPssOmNGgChwyQ8UoEZczXGKCF2EcOI2KtMN0iz09jo6aTeuKCSYDGYRId0rHAnoebTyguDyna4bZLadgMRw=w2226-h1670-s-no" loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AJFCJaUxYoWvjAKxio2pFyzTid_GqJjg9u8W-pWlkvVC5csZn_goKj2bQPqDDvEOqplBMnfyGEDOX4kAHDHim6bDxWlNZCWAI9zXeB74NtQ0yfQri2LqLX5cDh5-m3UEJFRUWQ858C9j4z6zRhe1o6PdEH-k5Q=w2226-h1670-s-no" loading="lazy">
       </div>
       <div class="column">
         <div class="column-title"> 後 </div>
-        <img class="clicker" alt="後" src="https://lh3.googleusercontent.com/pw/AJFCJaV25jT8f4oeoQVgYS6PyNj5dU5wfDCP4uBubIgvKL5MisRXL3je6fQReh7jGLXf0w4SmBABUMWY1HC7flMp_a7ly-BXBEa_KqnpSkWzffwni-o4gidkazA77-cRKrT03g01GOAS2LKNZTkja5IGSHEqVw=w1293-h970-s-no", loading="lazy">
+        <img class="clicker" data-caption="" src="https://lh3.googleusercontent.com/pw/AJFCJaV25jT8f4oeoQVgYS6PyNj5dU5wfDCP4uBubIgvKL5MisRXL3je6fQReh7jGLXf0w4SmBABUMWY1HC7flMp_a7ly-BXBEa_KqnpSkWzffwni-o4gidkazA77-cRKrT03g01GOAS2LKNZTkja5IGSHEqVw=w1293-h970-s-no" loading="lazy">
       </div>
     </div>
 
@@ -248,8 +251,9 @@
 
   </div>
 
+  <script src="js/main.js"></script>
   <script src="pages/gal/js/main.js"></script>
-
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </body>
 
 

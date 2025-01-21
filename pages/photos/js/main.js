@@ -1,65 +1,17 @@
 
 
-var modal = document.getElementById('myModal');
-
-//var img = document.getElementById("myImg");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-//img.onclick = function(){
-//  modal.style.display = "block";
-//  modalImg.src = this.src;
-//  captionText.innerHTML = this.alt;
-//}
-
-
-
-const matches = document.querySelectorAll(".clicker");
-
-matches.forEach(match => {
-  //match.addEventListener("click", function () {
-    match.addEventListener("click", function () {
-    console.log("Clicked!");
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-  })
-})
-
-
-$(modal).click(function(event){
-  if (modalImg.contains(event.target)){
-
-  } else{
-    console.log("Clicked outside!");
-    modal.style.display = "none"
-  }
-})
-
-$(document).keydown(function(e) {
-  if (e.key === "Escape") {
-    modal.style.display = "none"
-  }
-});
 
 
 
 document.addEventListener('DOMContentLoaded', () => {
-
   let myBtns=document.querySelectorAll('.button');
   myBtns.forEach(function(btn) {
-
       btn.addEventListener('click', () => {
         console.log('clicked');
-
-        
         // add active class to the button that was clicked
-
         myBtns.forEach(b => b.classList.remove('active'));
-
       });
-
   });
-
 });
 
 
@@ -80,12 +32,8 @@ function hideAll(){
   button_ir[0].style.border = "2px solid #ffffff";
   var button_bw = document.getElementsByClassName("button_bw");
   button_bw[0].style.border = "2px solid #ffffff";
-
-
-
-
-
 }
+
 
 function showColor(){
   var x = document.getElementById("colour");
@@ -101,6 +49,10 @@ function showColor(){
   // change button_colour border
   var button_colour = document.getElementsByClassName("button_colour");
   button_colour[0].style.border = "2px solid #0064e6";
+
+  images = document.querySelectorAll('#colour .clicker');
+  setupLightbox(images);
+
 }
 
 function showBlackAndWhite(){
@@ -117,6 +69,9 @@ function showBlackAndWhite(){
   // change button_bw border
   var button_bw = document.getElementsByClassName("button_bw");
   button_bw[0].style.border = "2px solid #000000";
+
+  images = document.querySelectorAll('#bw .clicker');
+  setupLightbox(images);
 }
 
 function showInfrared(){
@@ -133,6 +88,9 @@ function showInfrared(){
   // change button_ir border
   var button_ir = document.getElementsByClassName("button_ir");
   button_ir[0].style.border = "2px solid #6d0000";
+
+  images = document.querySelectorAll('#infrared .clicker');
+  setupLightbox(images);
 }
 
 window.onload = function() {
@@ -160,15 +118,58 @@ window.onload = function() {
   // go to top of page
 
   window.scrollTo(0, 0);
-
-
-
-
-
 }
 
 
 
 
 
+function setupLightbox(images) {
+
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const caption = document.getElementById('caption');
+  const close = document.getElementById('close');
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+
+  let currentIndex = 0;
+
+  images.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      lightbox.classList.remove('hidden');
+      lightboxImg.src = img.src;
+      caption.textContent = img.getAttribute('data-caption');
+      currentIndex = index;
+    });
+  });
+
+  close.addEventListener('click', () => {
+    lightbox.classList.add('hidden');
+  });
+
+  lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) {
+      lightbox.classList.add('hidden');
+    }
+  });
+
+  const showImage = (index) => {
+    currentIndex = (index + images.length) % images.length;
+    lightboxImg.src = images[currentIndex].src;
+    caption.textContent = images[currentIndex].getAttribute('data-caption');
+  };
+
+  prev.addEventListener('click', () => showImage(currentIndex - 1));
+  next.addEventListener('click', () => showImage(currentIndex + 1));
+  
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('hidden')) {
+      if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+      if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+      if (e.key === 'Escape') lightbox.classList.add('hidden');
+    }
+  });
+}
 
