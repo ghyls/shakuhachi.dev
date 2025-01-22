@@ -1,19 +1,11 @@
 
 
+// Check if the screen is touchable
+const isTouchable = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  let myBtns=document.querySelectorAll('.button');
-  myBtns.forEach(function(btn) {
-      btn.addEventListener('click', () => {
-        console.log('clicked');
-        // add active class to the button that was clicked
-        myBtns.forEach(b => b.classList.remove('active'));
-      });
-  });
-});
-
+document.addEventListener('DOMContentLoaded', () => { });
 
 
 function hideAll(){
@@ -126,12 +118,28 @@ window.onload = function() {
 
 function setupLightbox(images) {
 
+
+
+
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
   const caption = document.getElementById('caption');
   const close = document.getElementById('close');
   const prev = document.getElementById('prev');
   const next = document.getElementById('next');
+
+
+  if (! isTouchable) {
+    prev.style.display = "none";
+    next.style.display = "none";
+    close.style.display = "none";
+  }
+
+
+
+
+
+
 
   let currentIndex = 0;
 

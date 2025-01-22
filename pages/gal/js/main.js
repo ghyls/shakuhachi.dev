@@ -2,9 +2,14 @@
 
 
 images = document.querySelectorAll('.clicker');
-
+const isTouchable = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
 
 function setupLightbox(images) {
+
+
+
+  console.log(isTouchable);
+
 
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
@@ -12,6 +17,14 @@ function setupLightbox(images) {
   const close = document.getElementById('close');
   const prev = document.getElementById('prev');
   const next = document.getElementById('next');
+
+
+  if (! isTouchable) {
+    prev.style.display = "none";
+    next.style.display = "none";
+    close.style.display = "none";
+  }
+
 
   let currentIndex = 0;
 
@@ -53,7 +66,6 @@ function setupLightbox(images) {
   });
 }
 
-console.log(images);
 setupLightbox(images);
 
 

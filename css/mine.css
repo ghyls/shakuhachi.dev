@@ -178,21 +178,28 @@ th, td {
   max-height: 93%; /* Adjust to fit the screen */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
-#close {
+
+
+#controls {
+  display: flex;
   position: absolute;
-  top: 50px;
-  right: 20px;
+  bottom: 5%;
+  align-items: center; /* Vertically align elements */
+  justify-content: space-between; /* Distribute arrows and close button */
+  width: 300px;
+  margin: 0 auto; /* Center the container horizontally */
+}
+#close {
+  display: block;
+  padding-top: 10px;
   color: white;
-  font-size: 30px;
+  font-size: 20px;
   cursor: pointer;
 }
 .arrow {
-  position: absolute;
-  top: 50%;
-  font-size: 40px;
   color: white;
+  font-size: 30px;
   cursor: pointer;
-  user-select: none;
 }
 #prev {
   left: 20px;
@@ -200,5 +207,3 @@ th, td {
 #next {
   right: 20px;
 }
-
-

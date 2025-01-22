@@ -106,12 +106,10 @@ p {
 /* Caption of Modal Image */
 #caption {
   display: block;
-  width: 80%;
   max-width: 700px;
   text-align: center;
   color: #ccc;
-  padding: 10px 0;
-  height: 150px;
+  padding-top: 8px;
 }
 
 /* Add Animation */
