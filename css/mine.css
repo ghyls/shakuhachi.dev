@@ -160,7 +160,7 @@ th, td {
   position: fixed;
   top: 0;
   left: 0;
-  padding-top: 75px; /* Location of the box */
+  padding-top: 0px; /* Location of the box */
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
